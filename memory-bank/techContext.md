@@ -8,10 +8,11 @@
   - Features: Built-in overflow protection, modern syntax
 
 ### Development Framework
-- **Hardhat**: Ethereum development environment
+- **Hardhat 3**: Ethereum development environment (ESM, `"type": "module"`)
   - Compilation, testing, deployment
-  - Local blockchain network
-  - Plugin ecosystem
+  - Config: `hardhat.config.ts` (TypeScript)
+  - Init: `npx hardhat --init` (not `npx hardhat init`)
+  - Plugins: hardhat-toolbox-mocha-ethers, optional Etherscan for verification
 
 ### Contract Libraries
 - **OpenZeppelin Contracts**: Audited smart contract library
@@ -27,9 +28,10 @@
 - **Chai**: Assertion library
 
 ### Deployment & Interaction
-- **MetaMask**: Browser wallet for token interactions
-- **Etherscan**: Blockchain explorer and contract verification
-- **Infura/Alchemy**: Ethereum node access (API keys required)
+- **MetaMask**: Browser wallet (primary = deployer, secondary = transfer testing)
+- **Etherscan**: Blockchain explorer and contract verification (API key in .env)
+- **Alchemy**: RPC provider; `SEPOLIA_RPC_URL` in .env points to Alchemy Sepolia endpoint
+- **dotenv**: Loads .env into process.env so Hardhat reads config variables
 
 ## Development Setup
 
@@ -40,35 +42,33 @@
 - Testnet ETH from faucet (free)
 - Real ETH for mainnet deployment ($5-20 estimated)
 
-### Project Structure
+### Project Structure (after PR #1)
 ```
 VMGT-Smart-Contract/
-├── contracts/          # Solidity contract files
-│   ├── VMGToken_v0.sol
-│   ├── VMGToken_v1.sol
-│   ├── VMGToken_v2.sol
-│   └── VMGToken.sol
-├── scripts/            # Deployment scripts
-│   ├── deploy-v0.js
-│   ├── deploy-v1.js
-│   ├── deploy-v2.js
-│   └── deploy-mainnet.js
-├── test/               # Unit tests
-│   ├── VMGToken_v0.test.js
-│   ├── VMGToken_v1.test.js
-│   └── VMGToken_v2.test.js
-├── hardhat.config.js   # Hardhat configuration
-├── .env                # Environment variables (gitignored)
-└── README.md           # Project documentation
+├── contracts/          # Solidity contract files (Counter.sol, Counter.t.sol, VMGToken_v0.sol)
+├── test/               # Tests (Mocha + ethers; Counter.ts from init)
+├── scripts/            # Scripts (send-op-tx.ts from init; deploy-v0 next)
+├── ignition/modules/   # Hardhat Ignition deployment modules (from init)
+├── hardhat.config.ts   # Hardhat 3 config (Sepolia via configVariable)
+├── .env                # Secrets: SEPOLIA_RPC_URL, SEPOLIA_PRIVATE_KEY, ETHERSCAN_API_KEY
+├── .env.example        # Template for .env (git-tracked)
+├── .gitignore          # Includes .env
+└── package.json        # "type": "module", Hardhat 3, OpenZeppelin, dotenv, Mocha, ethers
 ```
 
-### Installation Steps
-1. Install Node.js and npm
-2. Initialize Hardhat project: `npx hardhat init`
-3. Install dependencies: `npm install @openzeppelin/contracts`
-4. Configure Hardhat for Sepolia testnet
-5. Set up environment variables (.env file)
-6. Get API keys (Infura/Alchemy, Etherscan)
+### Environment Variables (.env)
+- **SEPOLIA_RPC_URL**: Alchemy Sepolia HTTPS URL (from Alchemy dashboard)
+- **SEPOLIA_PRIVATE_KEY**: Deployer wallet private key (MetaMask export)
+- **ETHERSCAN_API_KEY**: For contract verification (etherscan.io/myapikey)
+
+### Installation Steps (PR #1 – done)
+1. Node.js and npm installed
+2. Hardhat project initialized: `npx hardhat --init` (mocha-ethers template)
+3. OpenZeppelin contracts installed
+4. Sepolia network in hardhat.config.ts via `configVariable("SEPOLIA_RPC_URL")`
+5. .env and .env.example created; .env in .gitignore; dotenv loaded in hardhat.config.ts
+6. Alchemy API key → SEPOLIA_RPC_URL; Etherscan API key → ETHERSCAN_API_KEY
+7. MetaMask: primary + secondary accounts; Sepolia added as network; testnet ETH via Google faucet
 
 ## Technical Constraints
 
@@ -118,8 +118,8 @@ VMGT-Smart-Contract/
 
 ## Compatibility Requirements
 
-- Node.js: Latest stable LTS version
-- Hardhat: Latest stable version
-- OpenZeppelin Contracts: Latest stable version compatible with Solidity 0.8+
-- MetaMask: Latest browser extension version
-- Solidity Compiler: Version specified in hardhat.config.js
+- Node.js: v22+ (project uses v24.x)
+- Hardhat: 3.x (ESM; init: `npx hardhat --init`)
+- OpenZeppelin Contracts: 5.x compatible with Solidity 0.8.x
+- MetaMask: Latest browser extension; Sepolia added manually if not present
+- Solidity: 0.8.28 (in hardhat.config.ts)

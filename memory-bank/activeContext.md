@@ -2,47 +2,37 @@
 
 ## Current Phase
 
-**Project Status**: Initialization Phase
-**Current Focus**: Memory Bank Setup and Project Planning
+**Project Status**: PR #1 and PR #2 complete; ready for PR #3
+**Current Focus**: Deployment Script (VMGToken_v0 to Sepolia)
 
 ## Recent Changes
 
-- Memory bank structure created
-- Project documentation initialized
-- PRD and task files reviewed
+- PR #2 (Basic ERC-20 Contract) completed
+- VMGToken_v0.sol created: inherits OpenZeppelin ERC20, mints 1M to deployer, name/symbol VMGToken_v0/VMGT0, decimals 18
+- transfer, balanceOf, approve, transferFrom, allowance inherited from ERC20 (node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol)
+- Contract compiles successfully (`npx hardhat compile`)
+- Solidity syntax highlighting: Cursor/VS Code extension (e.g. “Solidity” by Juan Blanco or “Hardhat Solidity” by Nomic Foundation)
 
 ## Next Steps
 
-### Immediate Actions
-1. Set up development environment (Node.js, Hardhat)
-2. Initialize Hardhat project structure
-3. Install dependencies (OpenZeppelin contracts)
-4. Configure Hardhat for Sepolia testnet
-5. Set up environment variables and API keys
+### Immediate Actions (PR #3: Deployment Script)
+- Create deploy script for VMGToken_v0
+- Test locally, then deploy to Sepolia
+- Verify contract on Etherscan
 
-### Phase 0: Environment Setup (PR #1 from tasks-0.md)
-- Install Node.js and npm
-- Initialize Hardhat project
-- Install OpenZeppelin contracts
-- Configure Hardhat for Sepolia
-- Set up MetaMask accounts
-- Acquire testnet ETH
-- Get API keys (Infura/Alchemy, Etherscan)
-
-### Phase 1: Basic ERC-20 Contract (PR #2 from tasks-0.md)
-- Create VMGToken_v0.sol
-- Implement basic ERC-20 functionality
-- Compile and verify contract
+### Phase 3: Unit Tests (PR #4)
+- Create VMGToken_v0 test file
+- Cover transfer, balanceOf, approve, transferFrom, allowance, events, edge cases
 
 ## Active Decisions and Considerations
 
 ### Development Approach
-- **Decision Pending**: Node.js version to use
-- **Decision Pending**: Hardhat configuration details
-- **Decision Pending**: API provider choice (Infura vs Alchemy)
+- **Decided**: Alchemy as RPC provider (SEPOLIA_RPC_URL)
+- **Decided**: Etherscan API key treated as required for verification
+- **Decided**: Hardhat 3, ESM, TypeScript config, Mocha + ethers
 
 ### Contract Design
-- **Decided**: Use OpenZeppelin contracts for security
+- **Decided**: OpenZeppelin contracts for security
 - **Decided**: Incremental versioning (v0, v1, v2, production)
 - **Decided**: 18 decimals (standard ERC-20)
 
@@ -53,10 +43,10 @@
 
 ## Current Blockers
 
-- None identified yet (project initialization phase)
+- None
 
 ## Notes
 
-- Project is in early planning/initialization stage
-- All task files (tasks-0.md, tasks-1.md, tasks-2.md) are defined
-- Ready to begin environment setup once decisions are made
+- Sepolia faucet: Google Cloud faucet used (no mainnet balance required). Alchemy/Chainlink faucets require mainnet ETH/LINK.
+- MetaMask “Add account” appears only after syncing finishes (in user’s version).
+- Solidity syntax highlighting: install “Solidity” or “Hardhat Solidity” extension in Cursor/VS Code.

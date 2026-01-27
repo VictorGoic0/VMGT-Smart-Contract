@@ -40,9 +40,9 @@ VMGToken (Production)
 - **Impact**: Clear version history, demonstrates iterative development
 
 ### 3. Hardhat Development Framework
-- **Decision**: Use Hardhat for development, testing, and deployment
-- **Rationale**: Industry standard, excellent tooling
-- **Impact**: Streamlined development workflow
+- **Decision**: Use Hardhat 3 for development, testing, and deployment (ESM, TypeScript config)
+- **Rationale**: Industry standard, excellent tooling; init via `npx hardhat --init` (mocha-ethers template)
+- **Impact**: Streamlined workflow; config in hardhat.config.ts; Sepolia via configVariable("SEPOLIA_RPC_URL"), configVariable("SEPOLIA_PRIVATE_KEY")
 
 ### 4. Testnet-First Approach
 - **Decision**: Deploy to Sepolia testnet before mainnet

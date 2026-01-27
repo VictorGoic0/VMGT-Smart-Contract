@@ -40,20 +40,20 @@ This file contains all tasks for setting up the development environment and impl
 
 ### Tasks:
 
-1. [ ] Create `VMGToken_v0.sol` contract file in `contracts/` directory
-2. [ ] Import OpenZeppelin ERC-20 base contract
-3. [ ] Define contract with name "VMGToken_v0" and symbol "VMGT0"
-4. [ ] Implement constructor to mint 1,000,000 tokens to deployer address
-5. [ ] Set token decimals to 18 (standard ERC-20 decimal places)
-6. [ ] Verify `transfer()` function is inherited from OpenZeppelin
-7. [ ] Verify `balanceOf()` function is inherited from OpenZeppelin
-8. [ ] Verify `approve()` function is inherited from OpenZeppelin
-9. [ ] Verify `transferFrom()` function is inherited from OpenZeppelin
-10. [ ] Verify `allowance()` function is inherited from OpenZeppelin
-11. [ ] Add comments documenting contract purpose and functions
-12. [ ] Compile contract (`npx hardhat compile`)
-13. [ ] Fix any compilation errors
-14. [ ] Review OpenZeppelin ERC-20 implementation for understanding
+1. [x] Create `VMGToken_v0.sol` contract file in `contracts/` directory
+2. [x] Import OpenZeppelin ERC-20 base contract
+3. [x] Define contract with name "VMGToken_v0" and symbol "VMGT0"
+4. [x] Implement constructor to mint 1,000,000 tokens to deployer address
+5. [x] Set token decimals to 18 (standard ERC-20 decimal places)
+6. [x] Verify `transfer()` function is inherited from OpenZeppelin
+7. [x] Verify `balanceOf()` function is inherited from OpenZeppelin
+8. [x] Verify `approve()` function is inherited from OpenZeppelin
+9. [x] Verify `transferFrom()` function is inherited from OpenZeppelin
+10. [x] Verify `allowance()` function is inherited from OpenZeppelin
+11. [x] Add comments documenting contract purpose and functions
+12. [x] Compile contract (`npx hardhat compile`)
+13. [x] Fix any compilation errors
+14. [x] Review OpenZeppelin ERC-20 implementation for understanding
 
 ---
 
