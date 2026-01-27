@@ -65,19 +65,19 @@ This file contains all tasks for setting up the development environment and impl
 
 ### Tasks:
 
-1. [ ] Create `deploy-v0.js` script in `scripts/` directory
-2. [ ] Import Hardhat ethers library
-3. [ ] Write deployment function to deploy VMGToken_v0
-4. [ ] Log deployer address and balance before deployment
-5. [ ] Log contract address after deployment
-6. [ ] Log initial token supply and deployer token balance
-7. [ ] Add gas estimation logging
-8. [ ] Test deployment script on Hardhat local network first
-9. [ ] Deploy contract to Sepolia testnet (`npx hardhat run scripts/deploy-v0.js --network sepolia`)
-10. [ ] Save contract address from deployment
-11. [ ] Verify contract on Etherscan (`npx hardhat verify --network sepolia <address>`)
-12. [ ] Check contract on Sepolia Etherscan
-13. [ ] Confirm token details are correct on Etherscan
+1. [x] Create `deploy-v0.js` script in `scripts/` directory
+2. [x] Import Hardhat ethers library
+3. [x] Write deployment function to deploy VMGToken_v0
+4. [x] Log deployer address and balance before deployment
+5. [x] Log contract address after deployment
+6. [x] Log initial token supply and deployer token balance
+7. [x] Add gas estimation logging
+8. [x] Test deployment script on Hardhat local network first
+9. [x] Deploy contract to Sepolia testnet (`npx hardhat run scripts/deploy-v0.js --network sepolia`) — requires `SEPOLIA_PRIVATE_KEY` in .env
+10. [x] Save contract address from deployment
+11. [x] Verify contract on Etherscan (verified on Blockscout; Etherscan requires ETHERSCAN_API_KEY in .env)
+12. [ ] Check contract on Sepolia Etherscan or Blockscout: https://sepolia.etherscan.io/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E or https://eth-sepolia.blockscout.com/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E#code
+13. [ ] Confirm token details are correct (name VMGToken_v0, symbol VMGT0, total supply 1,000,000)
 
 ---
 

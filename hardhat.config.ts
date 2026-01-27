@@ -36,4 +36,10 @@ export default defineConfig({
       accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
     },
   },
+  // verify plugin reads from verify.etherscan, not top-level etherscan
+  verify: {
+    etherscan: {
+      apiKey: process.env.ETHERSCAN_API_KEY ?? "",
+    },
+  },
 });
