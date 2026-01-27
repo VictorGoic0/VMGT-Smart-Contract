@@ -14,21 +14,21 @@ This file contains all tasks for setting up the development environment and impl
 
 ### Tasks:
 
-1. [ ] Install Node.js and npm (if not already installed)
-2. [ ] Install Hardhat development framework (`npm install --save-dev hardhat`)
-3. [ ] Initialize new Hardhat project (`npx hardhat init`)
-4. [ ] Install OpenZeppelin contracts library (`npm install @openzeppelin/contracts`)
-5. [ ] Configure Hardhat for Sepolia testnet in `hardhat.config.js`
-6. [ ] Create `.env` file for private keys and API keys
-7. [ ] Add `.env` to `.gitignore`
-8. [ ] Get Infura or Alchemy API key for Ethereum node access
-9. [ ] Set up MetaMask browser extension (if not already set up)
-10. [ ] Create primary MetaMask account for deployment
-11. [ ] Create secondary MetaMask account for testing transfers
-12. [ ] Get Sepolia testnet ETH from faucet (https://sepoliafaucet.com or similar)
-13. [ ] Verify testnet ETH received in MetaMask
-14. [ ] Install Etherscan API key for contract verification (optional but recommended)
-15. [ ] Create project directory structure (contracts/, test/, scripts/)
+1. [x] Install Node.js and npm (if not already installed)
+2. [x] Install Hardhat development framework (`npm install --save-dev hardhat`)
+3. [x] Initialize new Hardhat project (`npx hardhat init`)
+4. [x] Install OpenZeppelin contracts library (`npm install @openzeppelin/contracts`)
+5. [x] Configure Hardhat for Sepolia testnet in `hardhat.config.js`
+6. [x] Create `.env` file for private keys and API keys
+7. [x] Add `.env` to `.gitignore`
+8. [x] Get Infura or Alchemy API key for Ethereum node access
+9. [x] Set up MetaMask browser extension (if not already set up)
+10. [x] Create primary MetaMask account for deployment
+11. [x] Create secondary MetaMask account for testing transfers
+12. [x] Get Sepolia testnet ETH from faucet (https://sepoliafaucet.com or similar)
+13. [x] Verify testnet ETH received in MetaMask
+14. [x] Install Etherscan API key for contract verification (optional but recommended)
+15. [x] Create project directory structure (contracts/, test/, scripts/)
 
 ---
 
