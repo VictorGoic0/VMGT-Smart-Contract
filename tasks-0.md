@@ -76,8 +76,8 @@ This file contains all tasks for setting up the development environment and impl
 9. [x] Deploy contract to Sepolia testnet (`npx hardhat run scripts/deploy-v0.js --network sepolia`) — requires `SEPOLIA_PRIVATE_KEY` in .env
 10. [x] Save contract address from deployment
 11. [x] Verify contract on Etherscan (verified on Blockscout; Etherscan requires ETHERSCAN_API_KEY in .env)
-12. [ ] Check contract on Sepolia Etherscan or Blockscout: https://sepolia.etherscan.io/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E or https://eth-sepolia.blockscout.com/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E#code
-13. [ ] Confirm token details are correct (name VMGToken_v0, symbol VMGT0, total supply 1,000,000)
+12. [x] Check contract on Sepolia Etherscan or Blockscout: https://sepolia.etherscan.io/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E or https://eth-sepolia.blockscout.com/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E#code
+13. [x] Confirm token details are correct (name VMGToken_v0, symbol VMGT0, total supply 1,000,000)
 
 ---
 
@@ -89,27 +89,27 @@ This file contains all tasks for setting up the development environment and impl
 
 ### Tasks:
 
-1. [ ] Create `VMGToken_v0.test.js` in `test/` directory
-2. [ ] Set up test fixtures and deployment helper
-3. [ ] Write test: Contract deploys with correct name and symbol
-4. [ ] Write test: Initial supply is 1,000,000 tokens
-5. [ ] Write test: Deployer receives all initial tokens
-6. [ ] Write test: Total supply is correct
-7. [ ] Write test: Decimals is 18
-8. [ ] Write test: `balanceOf()` returns correct balances
-9. [ ] Write test: `transfer()` transfers tokens correctly
-10. [ ] Write test: `transfer()` emits Transfer event
-11. [ ] Write test: `transfer()` fails when insufficient balance
-12. [ ] Write test: `transfer()` fails when transferring to zero address
-13. [ ] Write test: `approve()` sets allowance correctly
-14. [ ] Write test: `approve()` emits Approval event
-15. [ ] Write test: `transferFrom()` transfers tokens with allowance
-16. [ ] Write test: `transferFrom()` updates allowance after transfer
-17. [ ] Write test: `transferFrom()` fails without sufficient allowance
-18. [ ] Write test: `allowance()` returns correct allowance
-19. [ ] Run all tests (`npx hardhat test`)
-20. [ ] Ensure 100% test coverage for implemented features
-21. [ ] Fix any failing tests
+1. [x] Create `VMGToken_v0.test.js` in `test/` directory
+2. [x] Set up test fixtures and deployment helper
+3. [x] Write test: Contract deploys with correct name and symbol
+4. [x] Write test: Initial supply is 1,000,000 tokens
+5. [x] Write test: Deployer receives all initial tokens
+6. [x] Write test: Total supply is correct
+7. [x] Write test: Decimals is 18
+8. [x] Write test: `balanceOf()` returns correct balances
+9. [x] Write test: `transfer()` transfers tokens correctly
+10. [x] Write test: `transfer()` emits Transfer event
+11. [x] Write test: `transfer()` fails when insufficient balance
+12. [x] Write test: `transfer()` fails when transferring to zero address
+13. [x] Write test: `approve()` sets allowance correctly
+14. [x] Write test: `approve()` emits Approval event
+15. [x] Write test: `transferFrom()` transfers tokens with allowance
+16. [x] Write test: `transferFrom()` updates allowance after transfer
+17. [x] Write test: `transferFrom()` fails without sufficient allowance
+18. [x] Write test: `allowance()` returns correct allowance
+19. [x] Run all tests (`npx hardhat test`)
+20. [x] Ensure 100% test coverage for implemented features
+21. [x] Fix any failing tests
 
 ---
 
