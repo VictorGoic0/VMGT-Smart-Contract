@@ -145,26 +145,26 @@ This file contains all tasks for setting up the development environment and impl
 
 ### Tasks:
 
-1. [ ] Create `README-v0.md` file
-2. [ ] Document project overview and purpose
-3. [ ] List prerequisites and dependencies
-4. [ ] Write setup instructions (installation steps)
-5. [ ] Document how to get testnet ETH
-6. [ ] Write compilation instructions
-7. [ ] Write deployment instructions for testnet
-8. [ ] Document how to verify contract on Etherscan
-9. [ ] Write testing instructions
-10. [ ] Document MetaMask setup for viewing tokens
-11. [ ] Include contract address on Sepolia
-12. [ ] Include Etherscan link to deployed contract
-13. [ ] Document token specifications (name, symbol, supply)
-14. [ ] List all implemented ERC-20 functions
-15. [ ] Add troubleshooting section
-16. [ ] Include gas costs for deployment
-17. [ ] Document MetaMask transfer testing process
-18. [ ] Add screenshots of successful deployment and transfers
-19. [ ] Create `DEPLOYMENT-HISTORY.md` to track all deployments
-20. [ ] Add V0 deployment details to deployment history (date, address, network, gas used)
+1. [x] Create `README-v0.md` file
+2. [x] Document project overview and purpose
+3. [x] List prerequisites and dependencies
+4. [x] Write setup instructions (installation steps)
+5. [x] Document how to get testnet ETH
+6. [x] Write compilation instructions
+7. [x] Write deployment instructions for testnet
+8. [x] Document how to verify contract on Etherscan
+9. [x] Write testing instructions
+10. [x] Document MetaMask setup for viewing tokens
+11. [x] Include contract address on Sepolia
+12. [x] Include Etherscan link to deployed contract
+13. [x] Document token specifications (name, symbol, supply)
+14. [x] List all implemented ERC-20 functions
+15. [x] Add troubleshooting section
+16. [x] Include gas costs for deployment
+17. [x] Document MetaMask transfer testing process
+18. [x] Add screenshots of successful deployment and transfers
+19. [x] Create `DEPLOYMENT-HISTORY.md` to track all deployments
+20. [x] Add V0 deployment details to deployment history (date, address, network, gas used)
 
 ---
 
