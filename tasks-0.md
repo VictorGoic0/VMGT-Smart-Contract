@@ -121,19 +121,19 @@ This file contains all tasks for setting up the development environment and impl
 
 ### Tasks:
 
-1. [ ] Add VMGToken_v0 to MetaMask on primary account (import custom token)
-2. [ ] Verify 1,000,000 tokens visible in primary account
-3. [ ] Copy secondary account address
-4. [ ] Initiate transfer of 10,000 tokens to secondary account
-5. [ ] Confirm transaction in MetaMask
-6. [ ] Wait for transaction confirmation on Sepolia
-7. [ ] Check transaction on Sepolia Etherscan
-8. [ ] Add VMGToken_v0 to MetaMask on secondary account
-9. [ ] Verify 10,000 tokens received in secondary account
-10. [ ] Verify primary account now has 990,000 tokens
-11. [ ] Test transfer back from secondary to primary (5,000 tokens)
-12. [ ] Verify balances update correctly
-13. [ ] Screenshot transaction history for documentation
+1. [x] Add VMGToken_v0 to MetaMask on primary account (import custom token)
+2. [x] Verify 1,000,000 tokens visible in primary account
+3. [x] Copy secondary account address
+4. [x] Initiate transfer of 10,000 tokens to secondary account
+5. [x] Confirm transaction in MetaMask
+6. [x] Wait for transaction confirmation on Sepolia
+7. [x] Check transaction on Sepolia Etherscan
+8. [x] Add VMGToken_v0 to MetaMask on secondary account
+9. [x] Verify 10,000 tokens received in secondary account
+10. [x] Verify primary account now has 990,000 tokens
+11. [x] Test transfer back from secondary to primary (5,000 tokens)
+12. [x] Verify balances update correctly
+13. [x] Screenshot transaction history for documentation
 
 ---
 
@@ -170,10 +170,10 @@ This file contains all tasks for setting up the development environment and impl
 
 ## V0 Completion Checklist
 
-- [ ] All PR tasks completed
-- [ ] Contract successfully deployed to Sepolia testnet
-- [ ] All unit tests passing
-- [ ] Token transfers tested successfully in MetaMask
-- [ ] Documentation complete and accurate
-- [ ] Contract verified on Etherscan
-- [ ] Ready to proceed to V1
+- [x] All PR tasks completed
+- [x] Contract successfully deployed to Sepolia testnet
+- [x] All unit tests passing
+- [x] Token transfers tested successfully in MetaMask
+- [x] Documentation complete and accurate
+- [x] Contract verified on Etherscan
+- [x] Ready to proceed to V1

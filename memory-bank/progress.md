@@ -33,10 +33,20 @@
   - Behavior tests for `balanceOf`, `transfer`, `approve`, `transferFrom`, `allowance`
   - Revert tests use OpenZeppelin custom errors (insufficient balance, invalid receiver, insufficient allowance)
   - `npx hardhat test` passes (Solidity and Mocha suites)
+- ✅ **PR #5: MetaMask Token Transfer Testing (complete)**
+  - VMGToken_v0 imported as a custom token in MetaMask (primary and secondary)
+  - Primary started with 1,000,000 VMGT0; 10,000 VMGT0 transferred to secondary on Sepolia
+  - Transaction confirmed and inspected on Sepolia Etherscan
+  - Secondary shows 10,000 VMGT0; primary shows 990,000 VMGT0
+  - 5,000 VMGT0 transferred back from secondary to primary; final balances match expectations
+  - Screenshots captured for transaction history and balances
+- ✅ **PR #6: Documentation (complete)**
+  - `README-v0.md` created with setup, deployment, verification, testing, and MetaMask instructions
+  - `DEPLOYMENT-HISTORY.md` updated with V0 Sepolia deployment details
 
 ### In Progress
 
-- 🔄 PR #5: MetaMask Token Transfer Testing — next
+- 🔄 V1 design and planning (tasks-1.md)
 
 ## What's Left to Build
 
@@ -55,11 +65,11 @@
 
 ### Phase 3: MetaMask Testing (tasks-0.md - PR #5)
 
-- [ ] Add VMGToken_v0 to MetaMask; test transfers primary ↔ secondary
+- [x] Add VMGToken_v0 to MetaMask; test transfers primary ↔ secondary
 
 ### Phase 4: Documentation (tasks-0.md - PR #6)
 
-- [ ] README-v0.md; deployment history; screenshots
+- [x] README-v0.md; deployment history; screenshots
 
 ### Phase 5: V1 Enhanced Features (tasks-1.md)
 
@@ -75,9 +85,9 @@
 
 ## Current Status
 
-**Overall Progress**: PR #1–#4 complete (~50–60% of V0 scope)
-**Current Phase**: Ready for PR #5 (MetaMask testing)
-**Next Milestone**: Confirm on-chain behavior via MetaMask transfers and document results
+**Overall Progress**: V0 (PR #1–#6) complete; ready to start V1
+**Current Phase**: Preparing PRs for V1 (burnable, mintable, pausable)
+**Next Milestone**: Implement and deploy VMGToken_v1 to Sepolia
 
 ## Known Issues
 
@@ -85,9 +95,9 @@
 
 ## Version History
 
-### V0 (In progress)
+### V0 (Complete)
 
-- Status: PR #1–#4 done; PR #5 (MetaMask testing) next
+- Status: PR #1–#6 done; V0 checklist satisfied
 - Features: Basic ERC-20 implemented (VMGToken_v0.sol)
 - Deployment: Deployed to Sepolia at `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
 

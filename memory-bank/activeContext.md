@@ -2,8 +2,8 @@
 
 ## Current Phase
 
-**Project Status**: PR #1–#4 complete; ready for PR #5
-**Current Focus**: MetaMask token transfer testing for VMGToken_v0 (Sepolia)
+**Project Status**: V0 (PR #1–#6) complete; ready to begin V1
+**Current Focus**: Planning V1 features (burnable, mintable, pausable) as defined in `tasks-1.md`
 
 ## Recent Changes
 
@@ -21,13 +21,11 @@
 
 ## Next Steps
 
-### Immediate Actions (PR #5: MetaMask Token Transfer Testing)
+### Immediate Actions
 
-- Import VMGToken_v0 as a custom token in MetaMask (primary account)
-- Verify 1,000,000 VMGT0 visible in primary account
-- Transfer 10,000 VMGT0 to secondary account and confirm on Sepolia
-- Import token in secondary account and verify balances (990,000 / 10,000 split, then 5,000 sent back)
-- Capture screenshots of transaction history for documentation
+- Review V0 artifacts (tests, deployment history, README-v0, screenshots)
+- Decide on sequencing and scope for V1 tasks in `tasks-1.md`
+- Begin PRs for V1 (burnable, mintable, pausable) after confirming V0 is stable
 
 ## Active Decisions and Considerations
 
