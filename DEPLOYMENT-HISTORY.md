@@ -35,9 +35,10 @@ All testnet deployments use Sepolia. Production mainnet deployment (VMGToken / V
 |-------|--------|
 | **Network** | Sepolia |
 | **Contract address** | `0x3a512DD3a61C398428fCdf7DE806Fea554D7f222` |
-| **Deployer** | *(same as V0/V1 deployer unless you used a different key)* |
-| **Gas used** | *(from deploy script output)* |
-| **Etherscan** | https://sepolia.etherscan.io/address/0x3a512DD3a61C398428fCdf7DE806Fea554D7f222 |
+| **Deployer** | `0x8034e95855189024b5A9A2B7C55d16bCe5d336dD` |
+| **Gas used** | 2,239,464 |
+| **Etherscan** | https://sepolia.etherscan.io/address/0x3a512DD3a61C398428fCdf7DE806Fea554D7f222#code |
+| **Blockscout (verified)** | https://eth-sepolia.blockscout.com/address/0x3a512DD3a61C398428fCdf7DE806Fea554D7f222#code |
 
 ---
 
