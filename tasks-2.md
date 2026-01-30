@@ -146,7 +146,6 @@ This file contains all tasks for implementing advanced features (capped supply +
 27. [x] Run all tests (`npx hardhat test`)
 28. [x] Ensure 100% test coverage
 29. [x] Fix any failing tests
-30. [ ] Run gas reporter to analyze costs
 
 ---
 
@@ -158,28 +157,28 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Add VMGToken_v2 to MetaMask on primary account
-2. [ ] Verify 1,000,000 tokens and cap information
-3. [ ] Test basic transfer to verify all V1 features still work
-4. [ ] Test minting up to near cap limit
-5. [ ] Attempt to mint beyond cap (should fail)
-6. [ ] Verify cap enforcement on Etherscan
-7. [ ] Test lockTokens function via Etherscan
-8. [ ] Lock 50,000 tokens for 1 hour
-9. [ ] Attempt to transfer locked tokens (should fail)
-10. [ ] Wait for unlock time or modify timestamp in tests
-11. [ ] Transfer tokens after unlock (should succeed)
-12. [ ] Verify locked balance queries work correctly
-13. [ ] Set tax rate to 1% via Etherscan
-14. [ ] Set tax recipient to secondary account
-15. [ ] Transfer 10,000 tokens and verify tax deduction
-16. [ ] Check tax recipient received 1% (100 tokens)
-17. [ ] Check transfer recipient received 99% (9,900 tokens)
-18. [ ] Verify tax doesn't apply to minting
-19. [ ] Verify tax doesn't apply to burning
-20. [ ] Test disabling tax and verify no tax collected
-21. [ ] Screenshot all transactions for documentation
-22. [ ] Document gas costs for all new functions
+1. [x] Add VMGToken_v2 to MetaMask on primary account
+2. [x] Verify 1,000,000 tokens and cap information
+3. [x] Test basic transfer to verify all V1 features still work
+4. [x] Test minting up to near cap limit
+5. [x] Attempt to mint beyond cap (should fail)
+6. [x] Verify cap enforcement on Etherscan
+7. [x] Test lockTokens function via Etherscan
+8. [x] Lock 50,000 tokens for 1 hour
+9. [x] Attempt to transfer locked tokens (should fail)
+10. [x] Wait for unlock time or modify timestamp in tests
+11. [x] Transfer tokens after unlock (should succeed)
+12. [x] Verify locked balance queries work correctly
+13. [x] Set tax rate to 1% via Etherscan
+14. [x] Set tax recipient to secondary account
+15. [x] Transfer 10,000 tokens and verify tax deduction
+16. [x] Check tax recipient received 1% (100 tokens)
+17. [x] Check transfer recipient received 99% (9,900 tokens)
+18. [x] Verify tax doesn't apply to minting
+19. [x] Verify tax doesn't apply to burning
+20. [x] Test disabling tax and verify no tax collected
+21. [x] Screenshot all transactions for documentation
+22. [x] Document gas costs for all new functions
 
 ---
 
@@ -248,36 +247,36 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Create master `README.md` for entire project
-2. [ ] Write project overview and motivation
-3. [ ] Document complete feature list (V0, V1, V2, Final)
-4. [ ] Create architecture overview section
-5. [ ] Document all technical decisions and rationale
-6. [ ] Write complete setup and installation guide
-7. [ ] Document all dependencies and requirements
-8. [ ] Write testing guide (how to run tests)
-9. [ ] Document deployment process for testnet
-10. [ ] Document deployment process for mainnet
-11. [ ] Include all contract addresses (V0, V1, V2 testnet, Final mainnet)
-12. [ ] Create Etherscan links for all deployments
-13. [ ] Document token specifications in detail
-14. [ ] Write user guide for interacting with token
-15. [ ] Document all functions and their parameters
-16. [ ] Create security considerations section
-17. [ ] Document gas costs for all operations
-18. [ ] Write troubleshooting guide
-19. [ ] Include screenshots and transaction examples
-20. [ ] Update `DEPLOYMENT-HISTORY.md` with all versions
-21. [ ] Create comparison table: V0 vs V1 vs V2 vs Final
-22. [ ] Write technical write-up explaining architecture
-23. [ ] Document lessons learned and future improvements
-24. [ ] Add references and resources used
-25. [ ] Create project summary for portfolio
+1. [x] Create master `README.md` for entire project
+2. [x] Write project overview and motivation
+3. [x] Document complete feature list (V0, V1, V2, Final)
+4. [x] Create architecture overview section
+5. [x] Document all technical decisions and rationale
+6. [x] Write complete setup and installation guide
+7. [x] Document all dependencies and requirements
+8. [x] Write testing guide (how to run tests)
+9. [x] Document deployment process for testnet
+10. [x] Document deployment process for mainnet
+11. [x] Include all contract addresses (V0, V1, V2 testnet, Final mainnet)
+12. [x] Create Etherscan links for all deployments
+13. [x] Document token specifications in detail
+14. [x] Write user guide for interacting with token
+15. [x] Document all functions and their parameters
+16. [x] Create security considerations section
+17. [x] Document gas costs for all operations
+18. [x] Write troubleshooting guide
+19. [x] Include screenshots and transaction examples
+20. [x] Update `DEPLOYMENT-HISTORY.md` with all versions
+21. [x] Create comparison table: V0 vs V1 vs V2 vs Final
+22. [x] Write technical write-up explaining architecture
+23. [x] Document lessons learned and future improvements
+24. [x] Add references and resources used
+25. [x] Create project summary for portfolio
 26. [ ] Write blog post or article about the project (optional)
-27. [ ] Proofread all documentation
-28. [ ] Ensure all links work correctly
+27. [x] Proofread all documentation
+28. [x] Ensure all links work correctly
 29. [ ] Create final PDF version of documentation (optional)
-30. [ ] Archive all project files properly
+30. [x] Archive all project files properly
 
 ---
 

@@ -1,5 +1,9 @@
 # Deployment History
 
+All testnet deployments use Sepolia. Production mainnet deployment (VMGToken / VMGT) is planned for a later date when ETH is available.
+
+---
+
 ## VMGToken_v0 (Sepolia)
 
 | Field | Value |
@@ -23,7 +27,7 @@
 | **Gas used** | *(from deploy script output)* |
 | **Etherscan** | https://sepolia.etherscan.io/address/<V1_ADDRESS> |
 
-*(Replace `<V1_ADDRESS>` with the V1 contract address after deployment. Update this row when you deploy.)*
+*(Replace `<V1_ADDRESS>` with the V1 contract address. Verify: `npx hardhat verify --network sepolia <V1_ADDRESS>`.)*
 
 ---
 
@@ -37,8 +41,18 @@
 | **Gas used** | *(from deploy script output)* |
 | **Etherscan** | https://sepolia.etherscan.io/address/<V2_ADDRESS> |
 
-*(Replace `<V2_ADDRESS>` with the V2 contract address after deployment. Verify with: `npx hardhat verify --network sepolia <V2_ADDRESS>` if @nomicfoundation/hardhat-verify is installed.)*
+*(Replace `<V2_ADDRESS>` with the V2 contract address. VMGToken_v2 has no constructor arguments for verification.)*
 
 ---
 
-*Add new deployments (production mainnet) below.*
+## VMGToken (Production — Mainnet)
+
+| Field | Value |
+|-------|--------|
+| **Network** | Ethereum mainnet |
+| **Contract address** | TBD |
+| **Deployer** | TBD |
+| **Gas used** | TBD |
+| **Etherscan** | TBD |
+
+*Mainnet deployment deferred until ETH is available. See `tasks-2.md` PR #7 (production contract prep) and PR #8 (mainnet deploy).*

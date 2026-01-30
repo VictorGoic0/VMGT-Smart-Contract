@@ -2,14 +2,14 @@
 
 ## Current Phase
 
-**Project Status**: V0 and V1 complete; V2 in progress (tasks-2.md)
-**Current Focus**: V2 PR #6 MetaMask testing (manual); then PR #7–#9 production and docs
+**Project Status**: V0, V1, and V2 complete through testnet and docs; mainnet deferred
+**Current Focus**: None active. Mainnet (PR #7 prep, PR #8 deploy) saved for when user has ETH; user working on something else.
 
 ## Recent Changes
 
-- **V2 PR #4** complete: deploy-v2.js created; user deployed to Sepolia and verified; task 15 (features visible on Etherscan) done after short delay post-verify.
-- **V2 PR #5** complete: VMGToken_v2.test.js added with baseline (V0/V1), cap, time-lock, tax, and integration tests; contract fix so mint/burn bypass Pausable and locked check only when locked > 0; all 54 V2 tests pass; full suite 105 passing.
-
+- **PR #6** complete: All 22 MetaMask testing tasks marked done.
+- **PR #9** complete: Master README.md, DEPLOYMENT-HISTORY.md (all versions + mainnet-deferred), CONTEXT-SUMMARY.md updated; comparison, portfolio summary, troubleshooting, security, user guide in README; all PR #9 tasks 1–25, 27, 28, 30 marked done.
+- **Mainnet deferred**: User does not have ETH on hand. PR #7 (production VMGToken.sol) and PR #8 (mainnet deploy) will be done on another day.
 - **V2 PR #1 (Capped supply)** completed: VMGToken_v2.sol created; ERC20Capped, 10M cap, remainingMintable(), _update override; compiles.
 - **V2 PR #2 (Time-locked transfers)** completed: _lockedBalance/_unlockTime mappings; lockTokens(account, amount, unlockAt) owner-only; getLockedBalance, getUnlockTime, unlockTokens, isUnlocked; _update enforces spendable (no transfer of locked tokens); TokensLocked/TokensUnlocked events; compiles.
 - **V2 PR #3 (Transfer tax)** completed: _taxRateBps (max 5%), _taxRecipient, _taxEnabled; setTaxRate, setTaxRecipient, setTaxEnabled (owner only); taxRate(), taxRecipient(), taxEnabled() getters; _update splits transfer to recipient + tax when enabled (no tax on mint/burn or when recipient is tax recipient); TaxCollected event; compiles.
@@ -18,8 +18,8 @@
 
 ### Immediate Actions
 
-- V2 PR #4 and PR #5 complete. Next: PR #6 MetaMask manual testing, then PR #7–#9.
-- Optional: add V1 deployment address to DEPLOYMENT-HISTORY.md if not already filled
+- V2 PR #1–#6 and PR #9 complete. Remaining: PR #7 (production contract prep) and PR #8 (mainnet deploy) when user has ETH.
+- Optional: add V1/V2 deployment addresses to DEPLOYMENT-HISTORY.md if not already filled
 
 ## Active Decisions and Considerations
 

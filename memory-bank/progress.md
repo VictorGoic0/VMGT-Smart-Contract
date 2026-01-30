@@ -46,7 +46,7 @@
 
 ### In Progress
 
-- 🔄 V2 (tasks-2.md) — PR #1–#5 complete; PR #6 MetaMask testing next
+- ✅ V2 (tasks-2.md) — PR #1–#6 and PR #9 complete; PR #7 and PR #8 (mainnet) deferred until user has ETH
 
 ## What's Left to Build
 
@@ -84,17 +84,19 @@
 - [x] Transfer tax (PR #3)
 - [x] Deploy script (PR #4); Sepolia deploy and verify done
 - [x] Unit tests (PR #5)
-- [ ] MetaMask testing (PR #6)
+- [x] MetaMask testing (PR #6)
+- [ ] Production prep (PR #7) and mainnet deploy (PR #8) — deferred until user has ETH
 
 ### Phase 7: Final Production (tasks-2.md)
 
-- [ ] VMGToken production contract; mainnet deploy; full documentation
+- [x] Final documentation package (PR #9): master README, DEPLOYMENT-HISTORY, CONTEXT-SUMMARY, comparison, portfolio summary
+- [ ] VMGToken production contract (PR #7); mainnet deploy (PR #8) — deferred until user has ETH
 
 ## Current Status
 
-**Overall Progress**: V0 and V1 complete; V2 contract, deploy, and unit tests complete
-**Current Phase**: V2 PR #6 MetaMask testing; then PR #7–#9 (production, mainnet, docs)
-**Next Milestone**: V2 deploy to Sepolia and full test suite
+**Overall Progress**: V0, V1, and V2 complete through testnet deployment, tests, manual testing, and final documentation (PR #9). Mainnet (PR #7, #8) deferred.
+**Current Phase**: Paused. Mainnet and production prep saved for when user has ETH; user working on something else.
+**Next Milestone**: PR #7 (production VMGToken.sol) and PR #8 (mainnet deploy) when ETH is available
 
 ## Known Issues
 
@@ -115,11 +117,11 @@
 - Deployment: Deployed to Sepolia (address in DEPLOYMENT-HISTORY.md)
 - Manual testing: Transfer, burn, mint, pause/unpause tested via MetaMask and Etherscan Write Contract
 
-### V2 (In Progress)
+### V2 (Complete)
 
-- Status: PR #1, #2, #3 complete; PR #4 (deploy) next
-- Features: Capped (done), Time-locked (done), Transfer Tax (done)
-- Deployment: Not deployed
+- Status: PR #1–#6 and PR #9 complete; PR #7 and PR #8 deferred
+- Features: Capped, Time-locked, Transfer Tax — all implemented and tested on Sepolia
+- Deployment: Deployed and verified on Sepolia (address in DEPLOYMENT-HISTORY when filled)
 
 ### Production (Planned)
 
