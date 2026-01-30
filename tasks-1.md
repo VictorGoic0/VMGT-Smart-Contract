@@ -45,20 +45,20 @@ This file contains all tasks for implementing enhanced features (burnable, minta
 
 ### Tasks:
 
-1. [ ] Create `deploy-v1.js` script in `scripts/` directory
-2. [ ] Copy structure from `deploy-v0.js` as template
-3. [ ] Update script to deploy VMGToken_v1
-4. [ ] Log deployer address and balance before deployment
-5. [ ] Log contract address after deployment
-6. [ ] Log initial token supply and deployer token balance
-7. [ ] Log owner address
-8. [ ] Add gas estimation logging
-9. [ ] Test deployment script on Hardhat local network first
-10. [ ] Deploy contract to Sepolia testnet (`npx hardhat run scripts/deploy-v1.js --network sepolia`)
-11. [ ] Save contract address from deployment
-12. [ ] Verify contract on Etherscan (`npx hardhat verify --network sepolia <address>`)
-13. [ ] Check contract on Sepolia Etherscan
-14. [ ] Confirm new features are visible on Etherscan
+1. [x] Create `deploy-v1.js` script in `scripts/` directory
+2. [x] Copy structure from `deploy-v0.js` as template
+3. [x] Update script to deploy VMGToken_v1
+4. [x] Log deployer address and balance before deployment
+5. [x] Log contract address after deployment
+6. [x] Log initial token supply and deployer token balance
+7. [x] Log owner address
+8. [x] Add gas estimation logging
+9. [x] Test deployment script on Hardhat local network first
+10. [x] Deploy contract to Sepolia testnet (`npx hardhat run scripts/deploy-v1.js --network sepolia`)
+11. [x] Save contract address from deployment
+12. [x] Verify contract on Etherscan (`npx hardhat verify --network sepolia <address>`)
+13. [x] Check contract on Sepolia Etherscan
+14. [x] Confirm new features are visible on Etherscan
 
 ---
 
