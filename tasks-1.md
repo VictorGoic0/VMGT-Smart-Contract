@@ -140,26 +140,26 @@ This file contains all tasks for implementing enhanced features (burnable, minta
 
 ### Tasks:
 
-1. [ ] Create `README-v1.md` file
-2. [ ] Copy structure from `README-v0.md` as template
-3. [ ] Update contract name and symbol to V1
-4. [ ] Document new burnable functionality
-5. [ ] Document new mintable functionality
-6. [ ] Document new pausable functionality
-7. [ ] Document owner access control
-8. [ ] Write usage examples for burn function
-9. [ ] Write usage examples for mint function
-10. [ ] Write usage examples for pause/unpause functions
-11. [ ] Include V1 contract address on Sepolia
-12. [ ] Include Etherscan link to V1 deployed contract
-13. [ ] Document how to interact with new functions via Etherscan
-14. [ ] Add security considerations section (owner privileges)
-15. [ ] Update gas costs for deployment and new functions
-16. [ ] Add screenshots of burn/mint/pause operations
-17. [ ] Update `DEPLOYMENT-HISTORY.md` with V1 deployment details
-18. [ ] Add comparison table: V0 vs V1 features
-19. [ ] Document testing results for new features
-20. [ ] Add troubleshooting section for pausable transfers
+1. [x] Create `README-v1.md` file
+2. [x] Copy structure from `README-v0.md` as template
+3. [x] Update contract name and symbol to V1
+4. [x] Document new burnable functionality
+5. [x] Document new mintable functionality
+6. [x] Document new pausable functionality
+7. [x] Document owner access control
+8. [x] Write usage examples for burn function
+9. [x] Write usage examples for mint function
+10. [x] Write usage examples for pause/unpause functions
+11. [x] Include V1 contract address on Sepolia
+12. [x] Include Etherscan link to V1 deployed contract
+13. [x] Document how to interact with new functions via Etherscan
+14. [x] Add security considerations section (owner privileges)
+15. [x] Update gas costs for deployment and new functions
+16. [x] Add screenshots of burn/mint/pause operations
+17. [x] Update `DEPLOYMENT-HISTORY.md` with V1 deployment details
+18. [x] Add comparison table: V0 vs V1 features
+19. [x] Document testing results for new features
+20. [x] Add troubleshooting section for pausable transfers
 
 ---
 

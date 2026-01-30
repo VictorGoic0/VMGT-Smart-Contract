@@ -2,24 +2,23 @@
 
 ## Current Phase
 
-**Project Status**: V0 complete; V1 PR #1–#3 complete; PR #4 (MetaMask) and PR #5 (docs) next
-**Current Focus**: V1 PR #4 (MetaMask testing) or PR #5 (documentation) in `tasks-1.md`
+**Project Status**: V0 complete; V1 PR #1–#3 and PR #5 (documentation) complete; PR #4 (MetaMask) deferred
+**Current Focus**: V1 PR #4 (MetaMask testing) when ready — burn/mint/pause via Etherscan + MetaMask
 
 ## Recent Changes
 
-- **V1 PR #3 (Unit Tests)** completed:
-  - VMGToken_v1.test.js: fixtures with owner and non-owner accounts; baseline ERC-20 tests from V0
-  - Mint: owner can mint, supply/balance updates, non-owner reverts, Transfer(from=0) event
-  - Burn: holder can burn, supply/balance decrease, Transfer(to=0), insufficient balance revert, approve + burnFrom
-  - Pause: owner pause/unpause, transfers fail when paused (EnforcedPause), non-owner cannot pause/unpause, Paused/Unpaused events, burn and mint still work when paused
-  - All tests passing (`npx hardhat test`)
+- **V1 PR #5 (Documentation)** completed:
+  - README-v1.md created from README-v0 template; VMGToken_v1 / VMGT1; burnable, mintable, pausable, owner access control
+  - Usage examples for burn, mint, pause/unpause; Etherscan Read/Write Contract interaction; security (owner privileges)
+  - DEPLOYMENT-HISTORY.md updated with V1 section; V0 vs V1 comparison table; troubleshooting for pausable transfers
+- **V1 PR #4 (MetaMask testing)** deferred to later — user to run when rested (burn, mint, pause/unpause on Sepolia).
 
 ## Next Steps
 
 ### Immediate Actions
 
-- PR #4: MetaMask testing for V1 (burn, mint, pause/unpause via Etherscan + MetaMask)
-- PR #5: README-v1.md and documentation update
+- When ready: PR #4 MetaMask testing for V1 (add VMGT1 to MetaMask, test burn/mint/pause via Etherscan Write Contract)
+- Then: V1 completion checklist; proceed to V2 (tasks-2.md) when desired
 
 ## Active Decisions and Considerations
 

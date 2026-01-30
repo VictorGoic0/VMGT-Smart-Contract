@@ -13,4 +13,18 @@
 
 ---
 
-*Add new deployments below. PR #6 will expand this file with full templates.*
+## VMGToken_v1 (Sepolia)
+
+| Field | Value |
+|-------|--------|
+| **Network** | Sepolia |
+| **Contract address** | *(paste from deploy output: `npx hardhat run scripts/deploy-v1.js --network sepolia`)* |
+| **Deployer** | *(same as V0 deployer unless you used a different key)* |
+| **Gas used** | *(from deploy script output)* |
+| **Etherscan** | https://sepolia.etherscan.io/address/<V1_ADDRESS> |
+
+*(Replace `<V1_ADDRESS>` with the V1 contract address after deployment. Update this row when you deploy.)*
+
+---
+
+*Add new deployments (V2, production) below.*
