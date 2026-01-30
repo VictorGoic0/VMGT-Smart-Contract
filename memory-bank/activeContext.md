@@ -2,30 +2,24 @@
 
 ## Current Phase
 
-**Project Status**: V0 (PR #1–#6) complete; ready to begin V1
-**Current Focus**: Planning V1 features (burnable, mintable, pausable) as defined in `tasks-1.md`
+**Project Status**: V0 complete; V1 PR #1–#3 complete; PR #4 (MetaMask) and PR #5 (docs) next
+**Current Focus**: V1 PR #4 (MetaMask testing) or PR #5 (documentation) in `tasks-1.md`
 
 ## Recent Changes
 
-- PR #3 (Deployment Script) completed:
-  - `deploy-v0.js` created and tested locally
-  - VMGToken_v0 deployed to Sepolia at `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
-  - Contract verified on Etherscan, Blockscout, and Sourcify
-  - Explorer check performed; name, symbol, and total supply confirmed
-- PR #4 (Unit Tests) completed:
-  - `VMGToken_v0.test.js` added with mocha-ethers tests
-  - Coverage for name/symbol, total supply, deployer balance, decimals
-  - Behavior tests for `balanceOf`, `transfer`, `approve`, `transferFrom`, `allowance`
-  - Revert tests aligned with OpenZeppelin custom errors (insufficient balance, invalid receiver, insufficient allowance)
-  - `npx hardhat test` passes (Solidity + Mocha suites)
+- **V1 PR #3 (Unit Tests)** completed:
+  - VMGToken_v1.test.js: fixtures with owner and non-owner accounts; baseline ERC-20 tests from V0
+  - Mint: owner can mint, supply/balance updates, non-owner reverts, Transfer(from=0) event
+  - Burn: holder can burn, supply/balance decrease, Transfer(to=0), insufficient balance revert, approve + burnFrom
+  - Pause: owner pause/unpause, transfers fail when paused (EnforcedPause), non-owner cannot pause/unpause, Paused/Unpaused events, burn and mint still work when paused
+  - All tests passing (`npx hardhat test`)
 
 ## Next Steps
 
 ### Immediate Actions
 
-- Review V0 artifacts (tests, deployment history, README-v0, screenshots)
-- Decide on sequencing and scope for V1 tasks in `tasks-1.md`
-- Begin PRs for V1 (burnable, mintable, pausable) after confirming V0 is stable
+- PR #4: MetaMask testing for V1 (burn, mint, pause/unpause via Etherscan + MetaMask)
+- PR #5: README-v1.md and documentation update
 
 ## Active Decisions and Considerations
 

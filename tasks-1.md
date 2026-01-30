@@ -70,34 +70,34 @@ This file contains all tasks for implementing enhanced features (burnable, minta
 
 ### Tasks:
 
-1. [ ] Create `VMGToken_v1.test.js` in `test/` directory
-2. [ ] Set up test fixtures with owner and non-owner accounts
-3. [ ] Copy basic ERC-20 tests from V0 as baseline
-4. [ ] Write test: Owner can mint new tokens
-5. [ ] Write test: Minting increases total supply
-6. [ ] Write test: Minted tokens go to specified address
-7. [ ] Write test: Non-owner cannot mint tokens
-8. [ ] Write test: Mint emits Transfer event from zero address
-9. [ ] Write test: Token holder can burn their own tokens
-10. [ ] Write test: Burning decreases total supply
-11. [ ] Write test: Burning decreases holder balance
-12. [ ] Write test: Burn emits Transfer event to zero address
-13. [ ] Write test: Cannot burn more tokens than balance
-14. [ ] Write test: Token holder can approve and burnFrom
-15. [ ] Write test: Owner can pause the contract
-16. [ ] Write test: Transfers fail when contract is paused
-17. [ ] Write test: Cannot transfer tokens while paused
-18. [ ] Write test: Owner can unpause the contract
-19. [ ] Write test: Transfers succeed after unpause
-20. [ ] Write test: Non-owner cannot pause contract
-21. [ ] Write test: Non-owner cannot unpause contract
-22. [ ] Write test: Pause emits Paused event
-23. [ ] Write test: Unpause emits Unpaused event
-24. [ ] Write test: Can still burn tokens when paused
-25. [ ] Write test: Owner can still mint tokens when paused
-26. [ ] Run all tests (`npx hardhat test`)
-27. [ ] Ensure 100% test coverage for new features
-28. [ ] Fix any failing tests
+1. [x] Create `VMGToken_v1.test.js` in `test/` directory
+2. [x] Set up test fixtures with owner and non-owner accounts
+3. [x] Copy basic ERC-20 tests from V0 as baseline
+4. [x] Write test: Owner can mint new tokens
+5. [x] Write test: Minting increases total supply
+6. [x] Write test: Minted tokens go to specified address
+7. [x] Write test: Non-owner cannot mint tokens
+8. [x] Write test: Mint emits Transfer event from zero address
+9. [x] Write test: Token holder can burn their own tokens
+10. [x] Write test: Burning decreases total supply
+11. [x] Write test: Burning decreases holder balance
+12. [x] Write test: Burn emits Transfer event to zero address
+13. [x] Write test: Cannot burn more tokens than balance
+14. [x] Write test: Token holder can approve and burnFrom
+15. [x] Write test: Owner can pause the contract
+16. [x] Write test: Transfers fail when contract is paused
+17. [x] Write test: Cannot transfer tokens while paused
+18. [x] Write test: Owner can unpause the contract
+19. [x] Write test: Transfers succeed after unpause
+20. [x] Write test: Non-owner cannot pause contract
+21. [x] Write test: Non-owner cannot unpause contract
+22. [x] Write test: Pause emits Paused event
+23. [x] Write test: Unpause emits Unpaused event
+24. [x] Write test: Can still burn tokens when paused
+25. [x] Write test: Owner can still mint tokens when paused
+26. [x] Run all tests (`npx hardhat test`)
+27. [x] Ensure 100% test coverage for new features
+28. [x] Fix any failing tests
 
 ---
 

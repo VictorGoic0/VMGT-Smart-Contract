@@ -46,7 +46,7 @@
 
 ### In Progress
 
-- 🔄 V1 design and planning (tasks-1.md)
+- 🔄 V1 PR #4 (MetaMask testing) and PR #5 (documentation)
 
 ## What's Left to Build
 
@@ -73,7 +73,9 @@
 
 ### Phase 5: V1 Enhanced Features (tasks-1.md)
 
-- [ ] Burnable, mintable, pausable; deploy and test V1
+- [x] VMGToken_v1 contract (burnable, mintable, pausable, Ownable)
+- [x] deploy-v1.js; deployed to Sepolia; verified on Etherscan
+- [x] VMGToken_v1 unit tests (PR #3); [ ] MetaMask testing (PR #4); [ ] docs (PR #5)
 
 ### Phase 6: V2 Advanced Features (tasks-2.md)
 
@@ -101,11 +103,11 @@
 - Features: Basic ERC-20 implemented (VMGToken_v0.sol)
 - Deployment: Deployed to Sepolia at `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
 
-### V1 (Planned)
+### V1 (In progress)
 
-- Status: Not started
-- Features: Burnable, Mintable, Pausable
-- Deployment: Not deployed
+- Status: PR #1 and PR #2 done; PR #3 (unit tests) next
+- Features: Burnable, Mintable, Pausable (VMGToken_v1.sol)
+- Deployment: Deployed to Sepolia (address in DEPLOYMENT-HISTORY when recorded)
 
 ### V2 (Planned)
 
@@ -122,6 +124,6 @@
 ## Deployment Addresses
 
 - V0 Sepolia: `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
-- V1 Sepolia: TBD
+- V1 Sepolia: (see DEPLOYMENT-HISTORY.md after deploy)
 - V2 Sepolia: TBD
 - Production Mainnet: TBD
