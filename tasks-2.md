@@ -14,19 +14,19 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Create `VMGToken_v2.sol` contract file in `contracts/` directory
-2. [ ] Copy VMGToken_v1 as starting template
-3. [ ] Import OpenZeppelin ERC20Capped extension
-4. [ ] Update contract name to "VMGToken_v2" and symbol to "VMGT2"
-5. [ ] Inherit from ERC20Capped in addition to existing extensions
-6. [ ] Define maximum supply cap (e.g., 10,000,000 tokens)
-7. [ ] Update constructor to pass cap to ERC20Capped constructor
-8. [ ] Override `_update()` function to support capped functionality
-9. [ ] Ensure mint function respects the cap
-10. [ ] Add getter function to check remaining mintable tokens
-11. [ ] Add comments documenting cap functionality
-12. [ ] Compile contract and fix any errors
-13. [ ] Review OpenZeppelin ERC20Capped implementation
+1. [x] Create `VMGToken_v2.sol` contract file in `contracts/` directory
+2. [x] Copy VMGToken_v1 as starting template
+3. [x] Import OpenZeppelin ERC20Capped extension
+4. [x] Update contract name to "VMGToken_v2" and symbol to "VMGT2"
+5. [x] Inherit from ERC20Capped in addition to existing extensions
+6. [x] Define maximum supply cap (e.g., 10,000,000 tokens)
+7. [x] Update constructor to pass cap to ERC20Capped constructor
+8. [x] Override `_update()` function to support capped functionality
+9. [x] Ensure mint function respects the cap
+10. [x] Add getter function to check remaining mintable tokens
+11. [x] Add comments documenting cap functionality
+12. [x] Compile contract and fix any errors
+13. [x] Review OpenZeppelin ERC20Capped implementation
 
 ---
 
