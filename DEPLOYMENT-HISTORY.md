@@ -22,12 +22,10 @@ All testnet deployments use Sepolia. Production mainnet deployment (VMGToken / V
 | Field | Value |
 |-------|--------|
 | **Network** | Sepolia |
-| **Contract address** | *(paste from deploy output: `npx hardhat run scripts/deploy-v1.js --network sepolia`)* |
+| **Contract address** | `0x4D60dcbD15C5589a8DA99727D9E60a3f3e2f74aB` |
 | **Deployer** | *(same as V0 deployer unless you used a different key)* |
 | **Gas used** | *(from deploy script output)* |
-| **Etherscan** | https://sepolia.etherscan.io/address/<V1_ADDRESS> |
-
-*(Replace `<V1_ADDRESS>` with the V1 contract address. Verify: `npx hardhat verify --network sepolia <V1_ADDRESS>`.)*
+| **Etherscan** | https://sepolia.etherscan.io/address/0x4D60dcbD15C5589a8DA99727D9E60a3f3e2f74aB |
 
 ---
 
@@ -36,12 +34,10 @@ All testnet deployments use Sepolia. Production mainnet deployment (VMGToken / V
 | Field | Value |
 |-------|--------|
 | **Network** | Sepolia |
-| **Contract address** | *(paste from deploy output: `npx hardhat run scripts/deploy-v2.js --network sepolia`)* |
+| **Contract address** | `0x3a512DD3a61C398428fCdf7DE806Fea554D7f222` |
 | **Deployer** | *(same as V0/V1 deployer unless you used a different key)* |
 | **Gas used** | *(from deploy script output)* |
-| **Etherscan** | https://sepolia.etherscan.io/address/<V2_ADDRESS> |
-
-*(Replace `<V2_ADDRESS>` with the V2 contract address. VMGToken_v2 has no constructor arguments for verification.)*
+| **Etherscan** | https://sepolia.etherscan.io/address/0x3a512DD3a61C398428fCdf7DE806Fea554D7f222 |
 
 ---
 

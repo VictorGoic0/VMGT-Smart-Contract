@@ -8,7 +8,7 @@ VMGToken_v1 is the **Day 1 MVP** of the VMGToken project: an ERC‑20 token with
 - **Decimals**: `18`
 - **Standard**: ERC‑20 (OpenZeppelin) + Burnable, Pausable, Ownable
 - **Network**: Sepolia
-- **Contract Address (Sepolia)**: See `DEPLOYMENT-HISTORY.md` for the V1 deployment address after running `npx hardhat run scripts/deploy-v1.js --network sepolia`
+- **Contract Address (Sepolia)**: `0x4D60dcbD15C5589a8DA99727D9E60a3f3e2f74aB`
 
 This document explains V1 features, how to deploy and verify, run tests, and interact with **mint**, **burn**, **pause**, and **unpause** via Etherscan.
 

@@ -142,8 +142,10 @@ All deployment addresses and Etherscan links are in **`DEPLOYMENT-HISTORY.md`**.
 
 - **V0 Sepolia**: `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`  
   [Etherscan](https://sepolia.etherscan.io/address/0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E)
-- **V1 Sepolia**: See DEPLOYMENT-HISTORY.md  
-- **V2 Sepolia**: See DEPLOYMENT-HISTORY.md  
+- **V1 Sepolia**: `0x4D60dcbD15C5589a8DA99727D9E60a3f3e2f74aB`  
+  [Etherscan](https://sepolia.etherscan.io/address/0x4D60dcbD15C5589a8DA99727D9E60a3f3e2f74aB)
+- **V2 Sepolia**: `0x3a512DD3a61C398428fCdf7DE806Fea554D7f222`  
+  [Etherscan](https://sepolia.etherscan.io/address/0x3a512DD3a61C398428fCdf7DE806Fea554D7f222)
 - **Production mainnet**: TBD (deferred until mainnet deploy)
 
 ---
