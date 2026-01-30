@@ -3,9 +3,12 @@
 ## Current Phase
 
 **Project Status**: V0 and V1 complete; V2 in progress (tasks-2.md)
-**Current Focus**: V2 PR #4 deploy script (deploy-v2.js, local + Sepolia, verify); then PR #5 unit tests
+**Current Focus**: V2 PR #6 MetaMask testing (manual); then PR #7–#9 production and docs
 
 ## Recent Changes
+
+- **V2 PR #4** complete: deploy-v2.js created; user deployed to Sepolia and verified; task 15 (features visible on Etherscan) done after short delay post-verify.
+- **V2 PR #5** complete: VMGToken_v2.test.js added with baseline (V0/V1), cap, time-lock, tax, and integration tests; contract fix so mint/burn bypass Pausable and locked check only when locked > 0; all 54 V2 tests pass; full suite 105 passing.
 
 - **V2 PR #1 (Capped supply)** completed: VMGToken_v2.sol created; ERC20Capped, 10M cap, remainingMintable(), _update override; compiles.
 - **V2 PR #2 (Time-locked transfers)** completed: _lockedBalance/_unlockTime mappings; lockTokens(account, amount, unlockAt) owner-only; getLockedBalance, getUnlockTime, unlockTokens, isUnlocked; _update enforces spendable (no transfer of locked tokens); TokensLocked/TokensUnlocked events; compiles.
@@ -15,8 +18,7 @@
 
 ### Immediate Actions
 
-- V2 PR #4 deploy script complete; user to run Sepolia deploy and verify when ready (tasks 12, 14, 15)
-- V2 PR #5: VMGToken_v2 unit tests
+- V2 PR #4 and PR #5 complete. Next: PR #6 MetaMask manual testing, then PR #7–#9.
 - Optional: add V1 deployment address to DEPLOYMENT-HISTORY.md if not already filled
 
 ## Active Decisions and Considerations

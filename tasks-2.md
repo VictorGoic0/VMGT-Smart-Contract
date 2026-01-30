@@ -102,10 +102,10 @@ This file contains all tasks for implementing advanced features (capped supply +
 9. [x] Set tax recipient address if implemented
 10. [x] Add gas estimation logging
 11. [x] Test deployment on Hardhat local network
-12. [ ] Deploy contract to Sepolia testnet
+12. [x] Deploy contract to Sepolia testnet
 13. [x] Save contract address from deployment
-14. [ ] Verify contract on Etherscan
-15. [ ] Check all features are visible on Etherscan
+14. [x] Verify contract on Etherscan
+15. [x] Check all features are visible on Etherscan
 
 ---
 
@@ -117,35 +117,35 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Create `VMGToken_v2.test.js` in `test/` directory
-2. [ ] Set up test fixtures with multiple test accounts
-3. [ ] Copy all V0 and V1 tests as baseline
-4. [ ] Write test: Contract deploys with correct cap
-5. [ ] Write test: Cannot mint beyond cap
-6. [ ] Write test: Mint fails when cap would be exceeded
-7. [ ] Write test: getRemainingMintable returns correct value
-8. [ ] Write test: Owner can lock tokens for an address
-9. [ ] Write test: Locked balance is tracked correctly
-10. [ ] Write test: Unlock time is stored correctly
-11. [ ] Write test: Cannot transfer locked tokens
-12. [ ] Write test: Can transfer unlocked tokens only
-13. [ ] Write test: Tokens automatically unlock after timestamp
-14. [ ] Write test: Can transfer all tokens after unlock time
-15. [ ] Write test: Owner can set tax rate
-16. [ ] Write test: Tax rate cannot exceed maximum (5%)
-17. [ ] Write test: Owner can set tax recipient
-18. [ ] Write test: Transfer collects correct tax amount
-19. [ ] Write test: Tax is sent to tax recipient
-20. [ ] Write test: Recipient receives amount minus tax
-21. [ ] Write test: Tax emits TaxCollected event
-22. [ ] Write test: Minting does not trigger tax
-23. [ ] Write test: Burning does not trigger tax
-24. [ ] Write test: Owner can enable/disable tax
-25. [ ] Write test: Transfers work without tax when disabled
-26. [ ] Write test: All features work together (integration tests)
-27. [ ] Run all tests (`npx hardhat test`)
-28. [ ] Ensure 100% test coverage
-29. [ ] Fix any failing tests
+1. [x] Create `VMGToken_v2.test.js` in `test/` directory
+2. [x] Set up test fixtures with multiple test accounts
+3. [x] Copy all V0 and V1 tests as baseline
+4. [x] Write test: Contract deploys with correct cap
+5. [x] Write test: Cannot mint beyond cap
+6. [x] Write test: Mint fails when cap would be exceeded
+7. [x] Write test: getRemainingMintable returns correct value
+8. [x] Write test: Owner can lock tokens for an address
+9. [x] Write test: Locked balance is tracked correctly
+10. [x] Write test: Unlock time is stored correctly
+11. [x] Write test: Cannot transfer locked tokens
+12. [x] Write test: Can transfer unlocked tokens only
+13. [x] Write test: Tokens automatically unlock after timestamp
+14. [x] Write test: Can transfer all tokens after unlock time
+15. [x] Write test: Owner can set tax rate
+16. [x] Write test: Tax rate cannot exceed maximum (5%)
+17. [x] Write test: Owner can set tax recipient
+18. [x] Write test: Transfer collects correct tax amount
+19. [x] Write test: Tax is sent to tax recipient
+20. [x] Write test: Recipient receives amount minus tax
+21. [x] Write test: Tax emits TaxCollected event
+22. [x] Write test: Minting does not trigger tax
+23. [x] Write test: Burning does not trigger tax
+24. [x] Write test: Owner can enable/disable tax
+25. [x] Write test: Transfers work without tax when disabled
+26. [x] Write test: All features work together (integration tests)
+27. [x] Run all tests (`npx hardhat test`)
+28. [x] Ensure 100% test coverage
+29. [x] Fix any failing tests
 30. [ ] Run gas reporter to analyze costs
 
 ---

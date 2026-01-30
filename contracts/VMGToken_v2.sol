@@ -204,26 +204,34 @@ contract VMGToken_v2 is ERC20, ERC20Burnable, ERC20Pausable, ERC20Capped, Ownabl
     }
 
     /**
-     * @dev Override to enforce: (1) only transfers blocked when paused; (2) cap on mint via ERC20Capped;
-     *      (3) transfers cannot move locked tokens; (4) when tax enabled, deduct tax and send to tax recipient.
-     *      Tax applies only to transfers (not mint or burn). Transfers to the tax recipient are not taxed again.
+     * @dev Override to enforce: (1) only transfers blocked when paused (mint/burn bypass Pausable);
+     *      (2) cap on mint; (3) transfers cannot move locked tokens; (4) when tax enabled, deduct tax.
+     *      Mint and burn call ERC20._update directly so they are not blocked by Pausable.
      */
     function _update(address from, address to, uint256 value) internal virtual override(ERC20, ERC20Pausable, ERC20Capped) {
-        if (from != address(0) && to != address(0)) {
-            _requireNotPaused();
-            uint256 locked = _effectiveLockedBalance(from);
+        if (from == address(0)) {
+            ERC20._update(from, to, value);
+            if (totalSupply() > cap()) revert ERC20ExceededCap(totalSupply(), cap());
+            return;
+        }
+        if (to == address(0)) {
+            ERC20._update(from, to, value);
+            return;
+        }
+        _requireNotPaused();
+        uint256 locked = _effectiveLockedBalance(from);
+        if (locked > 0) {
             uint256 bal = balanceOf(from);
             uint256 spendable = locked >= bal ? 0 : bal - locked;
             require(value <= spendable, "VMGToken: transfer exceeds spendable (locked)");
-
-            if (_taxEnabled && _taxRateBps > 0 && _taxRecipient != address(0) && to != _taxRecipient) {
-                uint256 taxAmount = (value * _taxRateBps) / 10_000;
-                uint256 netAmount = value - taxAmount;
-                super._update(from, to, netAmount);
-                super._update(from, _taxRecipient, taxAmount);
-                emit TaxCollected(_taxRecipient, taxAmount);
-                return;
-            }
+        }
+        if (_taxEnabled && _taxRateBps > 0 && _taxRecipient != address(0) && to != _taxRecipient) {
+            uint256 taxAmount = (value * _taxRateBps) / 10_000;
+            uint256 netAmount = value - taxAmount;
+            super._update(from, to, netAmount);
+            super._update(from, _taxRecipient, taxAmount);
+            emit TaxCollected(_taxRecipient, taxAmount);
+            return;
         }
         super._update(from, to, value);
     }

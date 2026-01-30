@@ -46,7 +46,7 @@
 
 ### In Progress
 
-- 🔄 V2 (tasks-2.md) — PR #1–#4 complete (deploy script ready; Sepolia deploy/verify by user); PR #5 tests next
+- 🔄 V2 (tasks-2.md) — PR #1–#5 complete; PR #6 MetaMask testing next
 
 ## What's Left to Build
 
@@ -82,8 +82,9 @@
 - [x] Capped supply (PR #1)
 - [x] Time-locked transfers (PR #2)
 - [x] Transfer tax (PR #3)
-- [x] Deploy script (PR #4); user runs Sepolia deploy + verify when ready
-- [ ] Unit tests (PR #5), MetaMask testing (PR #6)
+- [x] Deploy script (PR #4); Sepolia deploy and verify done
+- [x] Unit tests (PR #5)
+- [ ] MetaMask testing (PR #6)
 
 ### Phase 7: Final Production (tasks-2.md)
 
@@ -91,8 +92,8 @@
 
 ## Current Status
 
-**Overall Progress**: V0 and V1 complete; V2 contract implementation in progress (capped + time-lock done; tax next)
-**Current Phase**: V2 PR #5 unit tests; then MetaMask testing (PR #6)
+**Overall Progress**: V0 and V1 complete; V2 contract, deploy, and unit tests complete
+**Current Phase**: V2 PR #6 MetaMask testing; then PR #7–#9 (production, mainnet, docs)
 **Next Milestone**: V2 deploy to Sepolia and full test suite
 
 ## Known Issues
