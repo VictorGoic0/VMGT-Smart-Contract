@@ -14,26 +14,26 @@ This file contains all tasks for implementing enhanced features (burnable, minta
 
 ### Tasks:
 
-1. [ ] Create `VMGToken_v1.sol` contract file in `contracts/` directory
-2. [ ] Import OpenZeppelin ERC-20 base contract
-3. [ ] Import OpenZeppelin ERC20Burnable extension
-4. [ ] Import OpenZeppelin ERC20Pausable extension
-5. [ ] Import OpenZeppelin Ownable contract for access control
-6. [ ] Define contract with name "VMGToken_v1" and symbol "VMGT1"
-7. [ ] Inherit from ERC20, ERC20Burnable, ERC20Pausable, and Ownable
-8. [ ] Implement constructor to mint 1,000,000 tokens to deployer
-9. [ ] Pass ownership to deployer in constructor
-10. [ ] Verify `burn()` function is available from ERC20Burnable
-11. [ ] Verify `burnFrom()` function is available from ERC20Burnable
-12. [ ] Implement `mint()` function restricted to owner only
-13. [ ] Add `onlyOwner` modifier to mint function
-14. [ ] Verify `pause()` function is available (owner only)
-15. [ ] Verify `unpause()` function is available (owner only)
-16. [ ] Override `_update()` function to support pausable functionality
-17. [ ] Add proper function documentation comments
-18. [ ] Compile contract (`npx hardhat compile`)
-19. [ ] Fix any compilation errors
-20. [ ] Review OpenZeppelin extension implementations for understanding
+1. [x] Create `VMGToken_v1.sol` contract file in `contracts/` directory
+2. [x] Import OpenZeppelin ERC-20 base contract
+3. [x] Import OpenZeppelin ERC20Burnable extension
+4. [x] Import OpenZeppelin ERC20Pausable extension
+5. [x] Import OpenZeppelin Ownable contract for access control
+6. [x] Define contract with name "VMGToken_v1" and symbol "VMGT1"
+7. [x] Inherit from ERC20, ERC20Burnable, ERC20Pausable, and Ownable
+8. [x] Implement constructor to mint 1,000,000 tokens to deployer
+9. [x] Pass ownership to deployer in constructor
+10. [x] Verify `burn()` function is available from ERC20Burnable
+11. [x] Verify `burnFrom()` function is available from ERC20Burnable
+12. [x] Implement `mint()` function restricted to owner only
+13. [x] Add `onlyOwner` modifier to mint function
+14. [x] Verify `pause()` function is available (owner only)
+15. [x] Verify `unpause()` function is available (owner only)
+16. [x] Override `_update()` function to support pausable functionality
+17. [x] Add proper function documentation comments
+18. [x] Compile contract (`npx hardhat compile`)
+19. [x] Fix any compilation errors
+20. [x] Review OpenZeppelin extension implementations for understanding
 
 ---
 
