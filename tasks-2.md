@@ -38,21 +38,21 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Add mapping to track locked balances per address
-2. [ ] Add mapping to track unlock timestamps per address
-3. [ ] Implement `lockTokens()` function (owner only)
-4. [ ] Add parameters: address, amount, unlock timestamp
-5. [ ] Update locked balance and unlock time in mappings
-6. [ ] Emit TokensLocked event
-7. [ ] Implement `getLockedBalance()` view function
-8. [ ] Implement `getUnlockTime()` view function
-9. [ ] Override `_update()` to check for locked tokens before transfer
-10. [ ] Ensure transfers fail if locked tokens would be moved
-11. [ ] Allow transfers of unlocked tokens only
-12. [ ] Implement `unlockTokens()` function (automatic after timestamp)
-13. [ ] Add helper function to check if tokens are unlocked
-14. [ ] Add comments documenting time-lock functionality
-15. [ ] Compile contract and fix any errors
+1. [x] Add mapping to track locked balances per address
+2. [x] Add mapping to track unlock timestamps per address
+3. [x] Implement `lockTokens()` function (owner only)
+4. [x] Add parameters: address, amount, unlock timestamp
+5. [x] Update locked balance and unlock time in mappings
+6. [x] Emit TokensLocked event
+7. [x] Implement `getLockedBalance()` view function
+8. [x] Implement `getUnlockTime()` view function
+9. [x] Override `_update()` to check for locked tokens before transfer
+10. [x] Ensure transfers fail if locked tokens would be moved
+11. [x] Allow transfers of unlocked tokens only
+12. [x] Implement `unlockTokens()` function (automatic after timestamp)
+13. [x] Add helper function to check if tokens are unlocked
+14. [x] Add comments documenting time-lock functionality
+15. [x] Compile contract and fix any errors
 
 ---
 
@@ -64,22 +64,22 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Add state variable for tax rate (e.g., 1% = 100 basis points)
-2. [ ] Add state variable for tax recipient address
-3. [ ] Implement `setTaxRate()` function (owner only)
-4. [ ] Add validation to ensure tax rate is reasonable (e.g., max 5%)
-5. [ ] Implement `setTaxRecipient()` function (owner only)
-6. [ ] Add validation to ensure tax recipient is not zero address
-7. [ ] Override `_update()` to calculate and deduct tax on transfers
-8. [ ] Calculate tax amount based on transfer value and tax rate
-9. [ ] Transfer tax amount to tax recipient
-10. [ ] Transfer remaining amount to intended recipient
-11. [ ] Emit TaxCollected event with tax amount and recipient
-12. [ ] Add getter functions for tax rate and recipient
-13. [ ] Ensure tax doesn't apply to minting or burning
-14. [ ] Add option to enable/disable tax (boolean flag)
-15. [ ] Add comments documenting tax functionality
-16. [ ] Compile contract and fix any errors
+1. [x] Add state variable for tax rate (e.g., 1% = 100 basis points)
+2. [x] Add state variable for tax recipient address
+3. [x] Implement `setTaxRate()` function (owner only)
+4. [x] Add validation to ensure tax rate is reasonable (e.g., max 5%)
+5. [x] Implement `setTaxRecipient()` function (owner only)
+6. [x] Add validation to ensure tax recipient is not zero address
+7. [x] Override `_update()` to calculate and deduct tax on transfers
+8. [x] Calculate tax amount based on transfer value and tax rate
+9. [x] Transfer tax amount to tax recipient
+10. [x] Transfer remaining amount to intended recipient
+11. [x] Emit TaxCollected event with tax amount and recipient
+12. [x] Add getter functions for tax rate and recipient
+13. [x] Ensure tax doesn't apply to minting or burning
+14. [x] Add option to enable/disable tax (boolean flag)
+15. [x] Add comments documenting tax functionality
+16. [x] Compile contract and fix any errors
 
 ---
 
@@ -91,19 +91,19 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 ### Tasks:
 
-1. [ ] Create `deploy-v2.js` script in `scripts/` directory
-2. [ ] Copy structure from `deploy-v1.js` as template
-3. [ ] Update script to deploy VMGToken_v2
-4. [ ] Add cap parameter to deployment (10,000,000 tokens)
-5. [ ] Log all deployment parameters (cap, initial supply, owner)
-6. [ ] Log contract address after deployment
-7. [ ] Log remaining mintable tokens (cap - initial supply)
-8. [ ] Set initial tax rate if implemented (e.g., 1%)
-9. [ ] Set tax recipient address if implemented
-10. [ ] Add gas estimation logging
-11. [ ] Test deployment on Hardhat local network
+1. [x] Create `deploy-v2.js` script in `scripts/` directory
+2. [x] Copy structure from `deploy-v1.js` as template
+3. [x] Update script to deploy VMGToken_v2
+4. [x] Add cap parameter to deployment (10,000,000 tokens)
+5. [x] Log all deployment parameters (cap, initial supply, owner)
+6. [x] Log contract address after deployment
+7. [x] Log remaining mintable tokens (cap - initial supply)
+8. [x] Set initial tax rate if implemented (e.g., 1%)
+9. [x] Set tax recipient address if implemented
+10. [x] Add gas estimation logging
+11. [x] Test deployment on Hardhat local network
 12. [ ] Deploy contract to Sepolia testnet
-13. [ ] Save contract address from deployment
+13. [x] Save contract address from deployment
 14. [ ] Verify contract on Etherscan
 15. [ ] Check all features are visible on Etherscan
 

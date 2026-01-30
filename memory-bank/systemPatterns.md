@@ -20,8 +20,8 @@ VMGToken_v2 (Advanced)
 ├── ERC20Pausable (OpenZeppelin)
 ├── ERC20Capped (OpenZeppelin)
 ├── Ownable (OpenZeppelin)
-└── Custom: Time-locked transfers
-└── Custom: Transfer tax mechanism
+├── Custom: Time-locked transfers (lockTokens, getLockedBalance, getUnlockTime, unlockTokens, isUnlocked)
+└── Custom: Transfer tax (setTaxRate, setTaxRecipient, enable/disable; tax on transfers only, max 5%)
 
 VMGToken (Production)
 └── Same as V2 with production naming

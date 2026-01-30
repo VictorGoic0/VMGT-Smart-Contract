@@ -2,24 +2,21 @@
 
 ## Current Phase
 
-**Project Status**: V0 and V1 complete; ready to proceed to V2 (tasks-2.md)
-**Current Focus**: V2 planning when desired — capped supply, time-locked transfers, transfer tax
+**Project Status**: V0 and V1 complete; V2 in progress (tasks-2.md)
+**Current Focus**: V2 PR #4 deploy script (deploy-v2.js, local + Sepolia, verify); then PR #5 unit tests
 
 ## Recent Changes
 
-- **V1 PR #4 (MetaMask testing)** completed:
-  - VMGToken_v1 added to MetaMask (primary and secondary); 10,000 VMGT1 transferred primary → secondary; balances verified
-  - Burn tested via Etherscan Write Contract (5,000 burned); total supply and balance verified
-  - Mint tested via Etherscan Write Contract (50,000 to primary); total supply and balance verified
-  - Pause/unpause tested via Etherscan; transfer failed when paused, succeeded after unpause
-  - All PR #4 tasks and V1 completion checklist marked done; README-v1 updated with manual-testing note
-- **V1** is complete: PR #1–#5 done; contract deployed and verified on Sepolia; unit tests and manual testing complete.
+- **V2 PR #1 (Capped supply)** completed: VMGToken_v2.sol created; ERC20Capped, 10M cap, remainingMintable(), _update override; compiles.
+- **V2 PR #2 (Time-locked transfers)** completed: _lockedBalance/_unlockTime mappings; lockTokens(account, amount, unlockAt) owner-only; getLockedBalance, getUnlockTime, unlockTokens, isUnlocked; _update enforces spendable (no transfer of locked tokens); TokensLocked/TokensUnlocked events; compiles.
+- **V2 PR #3 (Transfer tax)** completed: _taxRateBps (max 5%), _taxRecipient, _taxEnabled; setTaxRate, setTaxRecipient, setTaxEnabled (owner only); taxRate(), taxRecipient(), taxEnabled() getters; _update splits transfer to recipient + tax when enabled (no tax on mint/burn or when recipient is tax recipient); TaxCollected event; compiles.
 
 ## Next Steps
 
 ### Immediate Actions
 
-- Proceed to V2 (tasks-2.md) when ready: capped supply, time-locked transfers, transfer tax
+- V2 PR #4 deploy script complete; user to run Sepolia deploy and verify when ready (tasks 12, 14, 15)
+- V2 PR #5: VMGToken_v2 unit tests
 - Optional: add V1 deployment address to DEPLOYMENT-HISTORY.md if not already filled
 
 ## Active Decisions and Considerations

@@ -27,4 +27,18 @@
 
 ---
 
-*Add new deployments (V2, production) below.*
+## VMGToken_v2 (Sepolia)
+
+| Field | Value |
+|-------|--------|
+| **Network** | Sepolia |
+| **Contract address** | *(paste from deploy output: `npx hardhat run scripts/deploy-v2.js --network sepolia`)* |
+| **Deployer** | *(same as V0/V1 deployer unless you used a different key)* |
+| **Gas used** | *(from deploy script output)* |
+| **Etherscan** | https://sepolia.etherscan.io/address/<V2_ADDRESS> |
+
+*(Replace `<V2_ADDRESS>` with the V2 contract address after deployment. Verify with: `npx hardhat verify --network sepolia <V2_ADDRESS>` if @nomicfoundation/hardhat-verify is installed.)*
+
+---
+
+*Add new deployments (production mainnet) below.*

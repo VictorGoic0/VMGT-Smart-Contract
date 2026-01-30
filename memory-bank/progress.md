@@ -46,7 +46,7 @@
 
 ### In Progress
 
-- 🔄 V2 (tasks-2.md) — not started; begin when ready
+- 🔄 V2 (tasks-2.md) — PR #1–#4 complete (deploy script ready; Sepolia deploy/verify by user); PR #5 tests next
 
 ## What's Left to Build
 
@@ -79,7 +79,11 @@
 
 ### Phase 6: V2 Advanced Features (tasks-2.md)
 
-- [ ] Capped supply, time-locked transfers, transfer tax; deploy and test V2
+- [x] Capped supply (PR #1)
+- [x] Time-locked transfers (PR #2)
+- [x] Transfer tax (PR #3)
+- [x] Deploy script (PR #4); user runs Sepolia deploy + verify when ready
+- [ ] Unit tests (PR #5), MetaMask testing (PR #6)
 
 ### Phase 7: Final Production (tasks-2.md)
 
@@ -87,9 +91,9 @@
 
 ## Current Status
 
-**Overall Progress**: V0 and V1 complete; ready for V2
-**Current Phase**: V1 complete; V2 (tasks-2.md) when desired
-**Next Milestone**: V2 enhanced features (capped supply, time-locked transfers, transfer tax)
+**Overall Progress**: V0 and V1 complete; V2 contract implementation in progress (capped + time-lock done; tax next)
+**Current Phase**: V2 PR #5 unit tests; then MetaMask testing (PR #6)
+**Next Milestone**: V2 deploy to Sepolia and full test suite
 
 ## Known Issues
 
@@ -110,10 +114,10 @@
 - Deployment: Deployed to Sepolia (address in DEPLOYMENT-HISTORY.md)
 - Manual testing: Transfer, burn, mint, pause/unpause tested via MetaMask and Etherscan Write Contract
 
-### V2 (Planned)
+### V2 (In Progress)
 
-- Status: Not started
-- Features: Capped, Time-locked, Transfer Tax
+- Status: PR #1, #2, #3 complete; PR #4 (deploy) next
+- Features: Capped (done), Time-locked (done), Transfer Tax (done)
 - Deployment: Not deployed
 
 ### Production (Planned)
