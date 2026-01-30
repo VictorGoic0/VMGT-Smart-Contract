@@ -2,23 +2,25 @@
 
 ## Current Phase
 
-**Project Status**: V0 complete; V1 PR #1–#3 and PR #5 (documentation) complete; PR #4 (MetaMask) deferred
-**Current Focus**: V1 PR #4 (MetaMask testing) when ready — burn/mint/pause via Etherscan + MetaMask
+**Project Status**: V0 and V1 complete; ready to proceed to V2 (tasks-2.md)
+**Current Focus**: V2 planning when desired — capped supply, time-locked transfers, transfer tax
 
 ## Recent Changes
 
-- **V1 PR #5 (Documentation)** completed:
-  - README-v1.md created from README-v0 template; VMGToken_v1 / VMGT1; burnable, mintable, pausable, owner access control
-  - Usage examples for burn, mint, pause/unpause; Etherscan Read/Write Contract interaction; security (owner privileges)
-  - DEPLOYMENT-HISTORY.md updated with V1 section; V0 vs V1 comparison table; troubleshooting for pausable transfers
-- **V1 PR #4 (MetaMask testing)** deferred to later — user to run when rested (burn, mint, pause/unpause on Sepolia).
+- **V1 PR #4 (MetaMask testing)** completed:
+  - VMGToken_v1 added to MetaMask (primary and secondary); 10,000 VMGT1 transferred primary → secondary; balances verified
+  - Burn tested via Etherscan Write Contract (5,000 burned); total supply and balance verified
+  - Mint tested via Etherscan Write Contract (50,000 to primary); total supply and balance verified
+  - Pause/unpause tested via Etherscan; transfer failed when paused, succeeded after unpause
+  - All PR #4 tasks and V1 completion checklist marked done; README-v1 updated with manual-testing note
+- **V1** is complete: PR #1–#5 done; contract deployed and verified on Sepolia; unit tests and manual testing complete.
 
 ## Next Steps
 
 ### Immediate Actions
 
-- When ready: PR #4 MetaMask testing for V1 (add VMGT1 to MetaMask, test burn/mint/pause via Etherscan Write Contract)
-- Then: V1 completion checklist; proceed to V2 (tasks-2.md) when desired
+- Proceed to V2 (tasks-2.md) when ready: capped supply, time-locked transfers, transfer tax
+- Optional: add V1 deployment address to DEPLOYMENT-HISTORY.md if not already filled
 
 ## Active Decisions and Considerations
 

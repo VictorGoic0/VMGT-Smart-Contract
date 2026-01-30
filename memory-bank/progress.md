@@ -46,7 +46,7 @@
 
 ### In Progress
 
-- 🔄 V1 PR #4 (MetaMask testing) — deferred; complete when ready
+- 🔄 V2 (tasks-2.md) — not started; begin when ready
 
 ## What's Left to Build
 
@@ -75,7 +75,7 @@
 
 - [x] VMGToken_v1 contract (burnable, mintable, pausable, Ownable)
 - [x] deploy-v1.js; deployed to Sepolia; verified on Etherscan
-- [x] VMGToken_v1 unit tests (PR #3); [ ] MetaMask testing (PR #4) deferred; [x] docs (PR #5)
+- [x] VMGToken_v1 unit tests (PR #3); [x] MetaMask testing (PR #4); [x] docs (PR #5) — V1 complete
 
 ### Phase 6: V2 Advanced Features (tasks-2.md)
 
@@ -87,9 +87,9 @@
 
 ## Current Status
 
-**Overall Progress**: V0 complete; V1 PR #1–#3 and PR #5 complete; PR #4 (MetaMask) deferred
-**Current Phase**: V1 docs done; MetaMask testing for V1 when ready
-**Next Milestone**: Complete V1 PR #4 (MetaMask), then V2 (tasks-2.md)
+**Overall Progress**: V0 and V1 complete; ready for V2
+**Current Phase**: V1 complete; V2 (tasks-2.md) when desired
+**Next Milestone**: V2 enhanced features (capped supply, time-locked transfers, transfer tax)
 
 ## Known Issues
 
@@ -103,11 +103,12 @@
 - Features: Basic ERC-20 implemented (VMGToken_v0.sol)
 - Deployment: Deployed to Sepolia at `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
 
-### V1 (In progress)
+### V1 (Complete)
 
-- Status: PR #1–#3 and PR #5 done; PR #4 (MetaMask testing) deferred
+- Status: PR #1–#5 done; V1 completion checklist satisfied
 - Features: Burnable, Mintable, Pausable (VMGToken_v1.sol)
 - Deployment: Deployed to Sepolia (address in DEPLOYMENT-HISTORY.md)
+- Manual testing: Transfer, burn, mint, pause/unpause tested via MetaMask and Etherscan Write Contract
 
 ### V2 (Planned)
 

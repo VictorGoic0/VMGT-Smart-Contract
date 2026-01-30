@@ -12,6 +12,8 @@ VMGToken_v1 is the **Day 1 MVP** of the VMGToken project: an ERC‑20 token with
 
 This document explains V1 features, how to deploy and verify, run tests, and interact with **mint**, **burn**, **pause**, and **unpause** via Etherscan.
 
+**Manual testing (PR #4)**: Transfer (MetaMask), burn (Etherscan Write Contract), mint (Etherscan Write Contract), and pause/unpause (Etherscan Write Contract) have been tested on Sepolia; transfers fail when paused and succeed after unpause.
+
 ---
 
 ## 1. Project Overview and Purpose (V1)

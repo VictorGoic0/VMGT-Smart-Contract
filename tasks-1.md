@@ -109,26 +109,26 @@ This file contains all tasks for implementing enhanced features (burnable, minta
 
 ### Tasks:
 
-1. [ ] Add VMGToken_v1 to MetaMask on primary account
-2. [ ] Verify 1,000,000 tokens visible in primary account
-3. [ ] Test basic transfer to secondary account (10,000 tokens)
-4. [ ] Verify transfer succeeds and balances update
-5. [ ] Test burn function via Etherscan Write Contract interface
-6. [ ] Burn 5,000 tokens from primary account
-7. [ ] Verify total supply decreased on Etherscan
-8. [ ] Verify balance decreased in MetaMask
-9. [ ] Test mint function via Etherscan Write Contract interface
-10. [ ] Mint 50,000 new tokens to primary account
-11. [ ] Verify total supply increased on Etherscan
-12. [ ] Verify balance increased in MetaMask
-13. [ ] Test pause function via Etherscan (owner account)
-14. [ ] Attempt transfer while paused (should fail)
-15. [ ] Verify transfer fails in MetaMask
-16. [ ] Test unpause function via Etherscan
-17. [ ] Attempt transfer after unpause (should succeed)
-18. [ ] Verify transfer succeeds in MetaMask
-19. [ ] Screenshot all transaction history for documentation
-20. [ ] Document gas costs for each new function
+1. [x] Add VMGToken_v1 to MetaMask on primary account
+2. [x] Verify 1,000,000 tokens visible in primary account
+3. [x] Test basic transfer to secondary account (10,000 tokens)
+4. [x] Verify transfer succeeds and balances update
+5. [x] Test burn function via Etherscan Write Contract interface
+6. [x] Burn 5,000 tokens from primary account
+7. [x] Verify total supply decreased on Etherscan
+8. [x] Verify balance decreased in MetaMask
+9. [x] Test mint function via Etherscan Write Contract interface
+10. [x] Mint 50,000 new tokens to primary account
+11. [x] Verify total supply increased on Etherscan
+12. [x] Verify balance increased in MetaMask
+13. [x] Test pause function via Etherscan (owner account)
+14. [x] Attempt transfer while paused (should fail)
+15. [x] Verify transfer fails in MetaMask
+16. [x] Test unpause function via Etherscan
+17. [x] Attempt transfer after unpause (should succeed)
+18. [x] Verify transfer succeeds in MetaMask
+19. [x] Screenshot all transaction history for documentation
+20. [x] Document gas costs for each new function
 
 ---
 
@@ -165,12 +165,12 @@ This file contains all tasks for implementing enhanced features (burnable, minta
 
 ## V1 Completion Checklist
 
-- [ ] All PR tasks completed
-- [ ] Contract successfully deployed to Sepolia testnet
-- [ ] All unit tests passing
-- [ ] Burn functionality tested successfully
-- [ ] Mint functionality tested successfully
-- [ ] Pause/unpause functionality tested successfully
-- [ ] Documentation complete and accurate
-- [ ] Contract verified on Etherscan
-- [ ] Ready to proceed to V2
+- [x] All PR tasks completed
+- [x] Contract successfully deployed to Sepolia testnet
+- [x] All unit tests passing
+- [x] Burn functionality tested successfully
+- [x] Mint functionality tested successfully
+- [x] Pause/unpause functionality tested successfully
+- [x] Documentation complete and accurate
+- [x] Contract verified on Etherscan
+- [x] Ready to proceed to V2
