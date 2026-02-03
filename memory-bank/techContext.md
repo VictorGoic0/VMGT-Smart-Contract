@@ -3,11 +3,13 @@
 ## Technologies Used
 
 ### Core Technologies
+
 - **Solidity**: Smart contract programming language
   - Version: Latest stable (0.8.x recommended)
   - Features: Built-in overflow protection, modern syntax
 
 ### Development Framework
+
 - **Hardhat 3**: Ethereum development environment (ESM, `"type": "module"`)
   - Compilation, testing, deployment
   - Config: `hardhat.config.ts` (TypeScript)
@@ -15,6 +17,7 @@
   - Plugins: hardhat-toolbox-mocha-ethers, optional Etherscan for verification
 
 ### Contract Libraries
+
 - **OpenZeppelin Contracts**: Audited smart contract library
   - ERC20: Base token implementation
   - ERC20Burnable: Token burning functionality
@@ -23,11 +26,13 @@
   - Ownable: Access control pattern
 
 ### Testing
+
 - **Hardhat Test**: Built-in testing framework
 - **Ethers.js**: Ethereum library for testing
 - **Chai**: Assertion library
 
 ### Deployment & Interaction
+
 - **MetaMask**: Browser wallet (primary = deployer, secondary = transfer testing)
 - **Etherscan**: Blockchain explorer and contract verification (API key in .env)
 - **Alchemy**: RPC provider; `SEPOLIA_RPC_URL` in .env points to Alchemy Sepolia endpoint
@@ -36,18 +41,20 @@
 ## Development Setup
 
 ### Prerequisites
+
 - Node.js and npm (latest stable version)
 - Git for version control
 - MetaMask browser extension
 - Testnet ETH from faucet (free)
 - Real ETH for mainnet deployment ($5-20 estimated)
 
-### Project Structure (after PR #1)
+### Project Structure
+
 ```
 VMGT-Smart-Contract/
-├── contracts/          # Solidity contract files (Counter.sol, Counter.t.sol, VMGToken_v0.sol)
-├── test/               # Tests (Mocha + ethers; Counter.ts from init)
-├── scripts/            # Scripts (send-op-tx.ts from init; deploy-v0 next)
+├── contracts/          # VMGToken_v0.sol, VMGToken_v1.sol, VMGToken_v2.sol, VMGToken.sol (production)
+├── test/               # VMGToken_v0.test.js, VMGToken_v1.test.js, VMGToken_v2.test.js, VMGToken.test.js
+├── scripts/            # deploy-v0.js, deploy-v1.js, deploy-v2.js, deploy-mainnet.js (mainnet; deploy code commented out)
 ├── ignition/modules/   # Hardhat Ignition deployment modules (from init)
 ├── hardhat.config.ts   # Hardhat 3 config (Sepolia via configVariable)
 ├── .env                # Secrets: SEPOLIA_RPC_URL, SEPOLIA_PRIVATE_KEY, ETHERSCAN_API_KEY
@@ -57,11 +64,14 @@ VMGT-Smart-Contract/
 ```
 
 ### Environment Variables (.env)
+
 - **SEPOLIA_RPC_URL**: Alchemy Sepolia HTTPS URL (from Alchemy dashboard)
 - **SEPOLIA_PRIVATE_KEY**: Deployer wallet private key (MetaMask export)
 - **ETHERSCAN_API_KEY**: For contract verification (etherscan.io/myapikey)
+- **Mainnet (PR #8)**: MAINNET_RPC_URL, MAINNET_PRIVATE_KEY (when deploying to mainnet)
 
 ### Installation Steps (PR #1 – done)
+
 1. Node.js and npm installed
 2. Hardhat project initialized: `npx hardhat --init` (mocha-ethers template)
 3. OpenZeppelin contracts installed
@@ -73,18 +83,21 @@ VMGT-Smart-Contract/
 ## Technical Constraints
 
 ### Blockchain Constraints
+
 - **Immutability**: Deployed contracts cannot be modified
 - **Gas Costs**: Every operation costs ETH
 - **Network Congestion**: Transaction times vary
 - **Finality**: Transactions require block confirmations
 
 ### Development Constraints
+
 - **Version Compatibility**: Solidity version must match compiler
 - **Gas Limits**: Contract size and operation costs
 - **Testnet Limitations**: Fake ETH, may have downtime
 - **Mainnet Costs**: Real money required for deployment
 
 ### Security Constraints
+
 - **No Code Changes**: Bugs require new deployment
 - **Access Control**: Owner privileges are permanent
 - **Private Keys**: Must be kept secure
@@ -93,12 +106,14 @@ VMGT-Smart-Contract/
 ## Dependencies
 
 ### npm Packages
+
 - `hardhat`: Development framework
 - `@openzeppelin/contracts`: Smart contract library
 - `ethers`: Ethereum interaction library
 - `dotenv`: Environment variable management
 
 ### External Services
+
 - **Ethereum Network**: Sepolia testnet, Ethereum mainnet
 - **Node Providers**: Infura or Alchemy (for network access)
 - **Block Explorers**: Etherscan (for verification and interaction)
@@ -107,11 +122,13 @@ VMGT-Smart-Contract/
 ## Deployment Platforms
 
 ### Testnet
+
 - **Sepolia**: Ethereum testnet
 - **Cost**: Free (testnet ETH from faucets)
 - **Purpose**: Testing and development
 
 ### Mainnet
+
 - **Ethereum Mainnet**: Production blockchain
 - **Cost**: Real ETH ($5-20 estimated for deployment)
 - **Purpose**: Final production deployment

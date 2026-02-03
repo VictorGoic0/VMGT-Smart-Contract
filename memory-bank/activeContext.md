@@ -2,37 +2,35 @@
 
 ## Current Phase
 
-**Project Status**: V0, V1, and V2 complete through testnet and docs; mainnet deferred
-**Current Focus**: None active. Mainnet (PR #7 prep, PR #8 deploy) saved for when user has ETH; user working on something else.
+**Project Status**: V0, V1, and V2 complete on Sepolia; PR #7 (production contract prep) complete; mainnet deploy (PR #8) deferred until user has ETH.
+**Current Focus**: Ready for PR #8 (mainnet deployment) when user has ETH; otherwise working on something else.
 
 ## Recent Changes
 
+- **PR #7 complete**: Production `VMGToken.sol` created (name "VMGToken", symbol "VMGT"); copied from VMGToken_v2 template; full test suite `test/VMGToken.test.js` (ESM, same coverage as V2); `scripts/deploy-mainnet.js` added (mainnet checks + gas estimates; deployment code commented out for safety). All PR #7 tasks in tasks-2.md marked done. No separate audit/security doc per user (deleted).
 - **PR #6** complete: All 22 MetaMask testing tasks marked done.
-- **PR #9** complete: Master README.md, DEPLOYMENT-HISTORY.md (all versions + mainnet-deferred), CONTEXT-SUMMARY.md updated; comparison, portfolio summary, troubleshooting, security, user guide in README; all PR #9 tasks 1–25, 27, 28, 30 marked done.
-- **Mainnet deferred**: User does not have ETH on hand. PR #7 (production VMGToken.sol) and PR #8 (mainnet deploy) will be done on another day.
-- **V2 PR #1 (Capped supply)** completed: VMGToken_v2.sol created; ERC20Capped, 10M cap, remainingMintable(), _update override; compiles.
-- **V2 PR #2 (Time-locked transfers)** completed: _lockedBalance/_unlockTime mappings; lockTokens(account, amount, unlockAt) owner-only; getLockedBalance, getUnlockTime, unlockTokens, isUnlocked; _update enforces spendable (no transfer of locked tokens); TokensLocked/TokensUnlocked events; compiles.
-- **V2 PR #3 (Transfer tax)** completed: _taxRateBps (max 5%), _taxRecipient, _taxEnabled; setTaxRate, setTaxRecipient, setTaxEnabled (owner only); taxRate(), taxRecipient(), taxEnabled() getters; _update splits transfer to recipient + tax when enabled (no tax on mint/burn or when recipient is tax recipient); TaxCollected event; compiles.
+- **PR #9** complete: Master README.md, DEPLOYMENT-HISTORY.md, CONTEXT-SUMMARY.md; comparison, portfolio summary, troubleshooting, security, user guide in README.
+- **V2** complete: VMGToken_v2 (cap, time-lock, tax) deployed and verified on Sepolia; manual testing done.
 
 ## Next Steps
 
 ### Immediate Actions
 
-- V2 PR #1–#6 and PR #9 complete. Remaining: PR #7 (production contract prep) and PR #8 (mainnet deploy) when user has ETH.
-- Optional: add V1/V2 deployment addresses to DEPLOYMENT-HISTORY.md if not already filled
+- PR #7 done. Remaining: **PR #8 (mainnet deploy)** when user has ETH — add mainnet to Hardhat config if needed, uncomment deployment in `scripts/deploy-mainnet.js`, deploy VMGToken, verify on Etherscan, test in MetaMask.
+- Optional: ensure V1/V2 deployment addresses are in DEPLOYMENT-HISTORY.md.
 
 ## Active Decisions and Considerations
 
 ### Development Approach
 
-- **Decided**: Alchemy as RPC provider (SEPOLIA_RPC_URL)
-- **Decided**: Etherscan API key treated as required for verification
+- **Decided**: Alchemy as RPC provider (SEPOLIA_RPC_URL; mainnet will use MAINNET_RPC_URL / MAINNET_PRIVATE_KEY)
+- **Decided**: Etherscan API key required for verification
 - **Decided**: Hardhat 3, ESM, TypeScript config, Mocha + ethers
 
 ### Contract Design
 
 - **Decided**: OpenZeppelin contracts for security
-- **Decided**: Incremental versioning (v0, v1, v2, production)
+- **Decided**: Incremental versioning (v0, v1, v2, production VMGToken)
 - **Decided**: 18 decimals (standard ERC-20)
 
 ### Testing Strategy
@@ -43,10 +41,10 @@
 
 ## Current Blockers
 
-- None
+- None (mainnet deferred by choice until ETH available)
 
 ## Notes
 
-- Sepolia faucet: Google Cloud faucet used (no mainnet balance required). Alchemy/Chainlink faucets require mainnet ETH/LINK.
+- Sepolia faucet: Google Cloud faucet used. Alchemy/Chainlink faucets may require mainnet ETH/LINK.
 - MetaMask “Add account” appears only after syncing finishes (in user’s version).
 - Solidity syntax highlighting: install “Solidity” or “Hardhat Solidity” extension in Cursor/VS Code.

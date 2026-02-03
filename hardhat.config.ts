@@ -35,6 +35,12 @@ export default defineConfig({
       url: configVariable("SEPOLIA_RPC_URL"),
       accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
     },
+    mainnet: {
+      type: "http",
+      chainType: "l1",
+      url: configVariable("MAINNET_RPC_URL"),
+      accounts: [configVariable("MAINNET_PRIVATE_KEY")],
+    },
   },
   // verify plugin reads from verify.etherscan, not top-level etherscan
   verify: {

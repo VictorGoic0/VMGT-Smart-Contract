@@ -3,6 +3,7 @@
 ## System Architecture
 
 ### Contract Structure
+
 ```
 VMGToken_v0 (Basic)
 ├── ERC20 (OpenZeppelin)
@@ -23,33 +24,38 @@ VMGToken_v2 (Advanced)
 ├── Custom: Time-locked transfers (lockTokens, getLockedBalance, getUnlockTime, unlockTokens, isUnlocked)
 └── Custom: Transfer tax (setTaxRate, setTaxRecipient, enable/disable; tax on transfers only, max 5%)
 
-VMGToken (Production)
-└── Same as V2 with production naming
+VMGToken (Production) — contracts/VMGToken.sol
+└── Same as V2; name "VMGToken", symbol "VMGT"; deploy via scripts/deploy-mainnet.js (mainnet)
 ```
 
 ## Key Technical Decisions
 
 ### 1. OpenZeppelin Contracts Library
+
 - **Decision**: Use OpenZeppelin's audited contracts
 - **Rationale**: Security best practices, battle-tested code
 - **Impact**: Reduced security risks, faster development
 
 ### 2. Incremental Versioning
+
 - **Decision**: Deploy separate contracts for each version (v0, v1, v2)
 - **Rationale**: Immutability of blockchain requires new deployments
 - **Impact**: Clear version history, demonstrates iterative development
 
 ### 3. Hardhat Development Framework
+
 - **Decision**: Use Hardhat 3 for development, testing, and deployment (ESM, TypeScript config)
 - **Rationale**: Industry standard, excellent tooling; init via `npx hardhat --init` (mocha-ethers template)
 - **Impact**: Streamlined workflow; config in hardhat.config.ts; Sepolia via configVariable("SEPOLIA_RPC_URL"), configVariable("SEPOLIA_PRIVATE_KEY")
 
 ### 4. Testnet-First Approach
+
 - **Decision**: Deploy to Sepolia testnet before mainnet
 - **Rationale**: Test without real money, verify functionality
 - **Impact**: Reduced risk, lower costs during development
 
 ### 5. Progressive Feature Addition
+
 - **Decision**: Add features incrementally across versions
 - **Rationale**: Demonstrates learning progression
 - **Impact**: Clear feature evolution, manageable complexity
@@ -57,22 +63,26 @@ VMGToken (Production)
 ## Design Patterns in Use
 
 ### 1. Inheritance Pattern
+
 - Contracts inherit from OpenZeppelin base contracts
 - Extends functionality without duplicating code
 - Follows Solidity best practices
 
 ### 2. Access Control Pattern
+
 - Ownable contract for owner-only functions
 - Modifiers (`onlyOwner`) for access control
 - Standard pattern for administrative functions
 
 ### 3. Event-Driven Architecture
+
 - Transfer events for token movements
 - Approval events for allowance changes
 - Paused/Unpaused events for state changes
 - Enables off-chain monitoring and indexing
 
 ### 4. State Machine Pattern
+
 - Pausable contract uses state machine (paused/unpaused)
 - Time-locked transfers use timestamp-based state
 - Clear state transitions
@@ -80,6 +90,7 @@ VMGToken (Production)
 ## Component Relationships
 
 ### Contract Dependencies
+
 ```
 VMGToken_v0
 └── OpenZeppelin ERC20
@@ -97,11 +108,13 @@ VMGToken_v2
 ```
 
 ### Deployment Flow
+
 ```
 Development → Local Testing → Testnet Deployment → Verification → Mainnet Deployment
 ```
 
 ### Testing Flow
+
 ```
 Unit Tests → Local Network Tests → Testnet Manual Tests → Mainnet Verification
 ```

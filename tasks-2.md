@@ -214,16 +214,18 @@ This file contains all tasks for implementing advanced features (capped supply +
 
 **PRD Section**: Final Production Deployment - Deploy to mainnet
 
+**Stopping point**: All tasks that do not require ETH are done. When ETH is available, complete tasks 6 and 9–20. See DEPLOY-MAINNET-CHECKLIST.md.
+
 ### Tasks:
 
-1. [ ] Create `deploy-mainnet.js` script in `scripts/` directory
-2. [ ] Copy deploy-v2.js as template
-3. [ ] Update for VMGToken (production) contract
-4. [ ] Add additional confirmation prompts (mainnet is real money)
-5. [ ] Ensure mainnet configuration in hardhat.config.js
-6. [ ] Get real ETH for deployment (estimate $5-20 needed)
-7. [ ] Test script one final time on testnet
-8. [ ] Create deployment checklist to verify all parameters
+1. [x] Create `deploy-mainnet.js` script in `scripts/` directory
+2. [x] Copy deploy-v2.js as template
+3. [x] Update for VMGToken (production) contract
+4. [x] Add additional confirmation prompts (mainnet is real money)
+5. [x] Ensure mainnet configuration in hardhat.config.js
+6. [ ] Get real ETH for deployment (estimate $5-20 needed) — _ETH arriving in a few days_
+7. [x] Test script one final time on testnet
+8. [x] Create deployment checklist to verify all parameters
 9. [ ] Verify deployer account has sufficient ETH
 10. [ ] Deploy contract to Ethereum mainnet
 11. [ ] Save all deployment transaction details

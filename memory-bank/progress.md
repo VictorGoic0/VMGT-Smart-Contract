@@ -7,96 +7,50 @@
 - ✅ Project structure defined
 - ✅ PRD and task files (tasks-0, tasks-1, tasks-2)
 - ✅ Memory bank initialized
-- ✅ **PR #1: Environment Setup & Prerequisites (complete)**
-  - Node.js and npm installed
-  - Hardhat 3 installed and project initialized (`npx hardhat --init`, mocha-ethers)
-  - OpenZeppelin contracts installed
-  - Hardhat configured for Sepolia in hardhat.config.ts
-  - .env and .env.example created; .env in .gitignore; dotenv loaded in config
-  - Alchemy API key → SEPOLIA_RPC_URL in .env
-  - MetaMask: primary (deployer) and secondary accounts; Sepolia network added
-  - Sepolia testnet ETH (0.05) via Google faucet; verified in MetaMask
-  - Etherscan API key obtained and stored in .env
-- ✅ **PR #2: Basic ERC-20 Contract (complete)**
-  - VMGToken_v0.sol in contracts/; inherits OpenZeppelin ERC20
-  - Name "VMGToken_v0", symbol "VMGT0", decimals 18; mint 1M to deployer in constructor
-  - transfer, balanceOf, approve, transferFrom, allowance inherited from ERC20
-  - Contract compiles (`npx hardhat compile`)
-- ✅ **PR #3: Deployment Script (complete)**
-  - `scripts/deploy-v0.js` created and logs deployer, balances, gas
-  - VMGToken_v0 deployed to Sepolia at `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
-  - Contract verified on Etherscan (after fixing config to use `verify.etherscan`), Blockscout, and Sourcify
-  - Explorer check performed; name, symbol, and total supply confirmed
-- ✅ **PR #4: Unit Tests (complete)**
-  - `test/VMGToken_v0.test.js` added
-  - Tests cover deployment metadata, initial supply, deployer balance, decimals
-  - Behavior tests for `balanceOf`, `transfer`, `approve`, `transferFrom`, `allowance`
-  - Revert tests use OpenZeppelin custom errors (insufficient balance, invalid receiver, insufficient allowance)
-  - `npx hardhat test` passes (Solidity and Mocha suites)
-- ✅ **PR #5: MetaMask Token Transfer Testing (complete)**
-  - VMGToken_v0 imported as a custom token in MetaMask (primary and secondary)
-  - Primary started with 1,000,000 VMGT0; 10,000 VMGT0 transferred to secondary on Sepolia
-  - Transaction confirmed and inspected on Sepolia Etherscan
-  - Secondary shows 10,000 VMGT0; primary shows 990,000 VMGT0
-  - 5,000 VMGT0 transferred back from secondary to primary; final balances match expectations
-  - Screenshots captured for transaction history and balances
-- ✅ **PR #6: Documentation (complete)**
-  - `README-v0.md` created with setup, deployment, verification, testing, and MetaMask instructions
-  - `DEPLOYMENT-HISTORY.md` updated with V0 Sepolia deployment details
+- ✅ **PR #1: Environment Setup & Prerequisites (complete)** — Hardhat 3, OpenZeppelin, Sepolia config, .env, MetaMask, Etherscan API key
+- ✅ **PR #2: Basic ERC-20 Contract (complete)** — VMGToken_v0.sol, compiles
+- ✅ **PR #3: Deployment Script (complete)** — deploy-v0.js; V0 deployed to Sepolia, verified
+- ✅ **PR #4: Unit Tests (complete)** — VMGToken_v0.test.js, all pass
+- ✅ **PR #5: MetaMask Token Transfer Testing (complete)** — V0 transfers tested
+- ✅ **PR #6: Documentation (complete)** — README-v0.md, DEPLOYMENT-HISTORY.md
+- ✅ **V1 (tasks-1.md)** — VMGToken_v1 (burn, mint, pause, Ownable); deploy-v1.js; Sepolia deploy/verify; tests; MetaMask testing; docs
+- ✅ **V2 (tasks-2.md) PR #1–#6** — VMGToken_v2 (cap, time-lock, tax); deploy-v2.js; Sepolia deploy/verify; full tests; MetaMask testing
+- ✅ **PR #9 (tasks-2.md)** — Master README, DEPLOYMENT-HISTORY, CONTEXT-SUMMARY, comparison, portfolio summary
+- ✅ **PR #7 (tasks-2.md) — Production contract prep (complete)**
+  - contracts/VMGToken.sol (name "VMGToken", symbol "VMGT"; same logic as V2)
+  - test/VMGToken.test.js (full suite, ESM)
+  - scripts/deploy-mainnet.js (mainnet checks, gas estimates; deployment code commented out)
+  - All 15 PR #7 tasks in tasks-2.md marked done
+  - No separate audit/security doc (user removed)
 
 ### In Progress
 
-- ✅ V2 (tasks-2.md) — PR #1–#6 and PR #9 complete; PR #7 and PR #8 (mainnet) deferred until user has ETH
+- None. PR #8 (mainnet deploy) deferred until user has ETH.
 
 ## What's Left to Build
-
-### Phase 1: Deployment Script (tasks-0.md - PR #3)
-
-- [x] Create deploy script for VMGToken_v0
-- [x] Test on local network
-- [x] Deploy to Sepolia
-- [x] Verify contract on Etherscan
-
-### Phase 2: Unit Tests (tasks-0.md - PR #4)
-
-- [x] Create VMGToken_v0 test file
-- [x] Write comprehensive test suite
-- [x] Run tests and achieve target coverage
-
-### Phase 3: MetaMask Testing (tasks-0.md - PR #5)
-
-- [x] Add VMGToken_v0 to MetaMask; test transfers primary ↔ secondary
-
-### Phase 4: Documentation (tasks-0.md - PR #6)
-
-- [x] README-v0.md; deployment history; screenshots
-
-### Phase 5: V1 Enhanced Features (tasks-1.md)
-
-- [x] VMGToken_v1 contract (burnable, mintable, pausable, Ownable)
-- [x] deploy-v1.js; deployed to Sepolia; verified on Etherscan
-- [x] VMGToken_v1 unit tests (PR #3); [x] MetaMask testing (PR #4); [x] docs (PR #5) — V1 complete
 
 ### Phase 6: V2 Advanced Features (tasks-2.md)
 
 - [x] Capped supply (PR #1)
 - [x] Time-locked transfers (PR #2)
 - [x] Transfer tax (PR #3)
-- [x] Deploy script (PR #4); Sepolia deploy and verify done
+- [x] Deploy script (PR #4); Sepolia deploy and verify
 - [x] Unit tests (PR #5)
 - [x] MetaMask testing (PR #6)
-- [ ] Production prep (PR #7) and mainnet deploy (PR #8) — deferred until user has ETH
+- [x] Production prep (PR #7)
+- [ ] Mainnet deploy (PR #8) — when user has ETH
 
 ### Phase 7: Final Production (tasks-2.md)
 
-- [x] Final documentation package (PR #9): master README, DEPLOYMENT-HISTORY, CONTEXT-SUMMARY, comparison, portfolio summary
-- [ ] VMGToken production contract (PR #7); mainnet deploy (PR #8) — deferred until user has ETH
+- [x] Final documentation (PR #9)
+- [x] VMGToken production contract (PR #7)
+- [ ] Mainnet deployment (PR #8) — when user has ETH
 
 ## Current Status
 
-**Overall Progress**: V0, V1, and V2 complete through testnet deployment, tests, manual testing, and final documentation (PR #9). Mainnet (PR #7, #8) deferred.
-**Current Phase**: Paused. Mainnet and production prep saved for when user has ETH; user working on something else.
-**Next Milestone**: PR #7 (production VMGToken.sol) and PR #8 (mainnet deploy) when ETH is available
+**Overall Progress**: V0, V1, V2 complete on Sepolia (contracts, deploy, tests, manual testing, docs). Production contract VMGToken.sol and deploy-mainnet.js ready; mainnet deploy (PR #8) deferred until user has ETH.
+**Current Phase**: Ready for mainnet; awaiting ETH to execute PR #8.
+**Next Milestone**: PR #8 — deploy VMGToken to Ethereum mainnet, verify on Etherscan, test in MetaMask.
 
 ## Known Issues
 
@@ -106,32 +60,31 @@
 
 ### V0 (Complete)
 
-- Status: PR #1–#6 done; V0 checklist satisfied
-- Features: Basic ERC-20 implemented (VMGToken_v0.sol)
-- Deployment: Deployed to Sepolia at `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
+- Status: PR #1–#6 done
+- Features: Basic ERC-20 (VMGToken_v0.sol)
+- Deployment: Sepolia `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
 
 ### V1 (Complete)
 
-- Status: PR #1–#5 done; V1 completion checklist satisfied
+- Status: PR #1–#5 done
 - Features: Burnable, Mintable, Pausable (VMGToken_v1.sol)
-- Deployment: Deployed to Sepolia (address in DEPLOYMENT-HISTORY.md)
-- Manual testing: Transfer, burn, mint, pause/unpause tested via MetaMask and Etherscan Write Contract
+- Deployment: Sepolia (see DEPLOYMENT-HISTORY.md)
 
 ### V2 (Complete)
 
-- Status: PR #1–#6 and PR #9 complete; PR #7 and PR #8 deferred
-- Features: Capped, Time-locked, Transfer Tax — all implemented and tested on Sepolia
-- Deployment: Deployed and verified on Sepolia (address in DEPLOYMENT-HISTORY when filled)
+- Status: PR #1–#6, PR #9 done
+- Features: Capped, Time-locked, Transfer Tax (VMGToken_v2.sol)
+- Deployment: Sepolia (see DEPLOYMENT-HISTORY.md)
 
-### Production (Planned)
+### Production (Contract Ready, Not Deployed)
 
-- Status: Not started
-- Features: All V2 features
-- Deployment: Not deployed
+- Status: PR #7 done; PR #8 not executed (no mainnet deploy yet)
+- Features: VMGToken.sol — same as V2, name "VMGToken", symbol "VMGT"
+- Deployment: Not deployed; script scripts/deploy-mainnet.js ready (deployment section commented out)
 
 ## Deployment Addresses
 
 - V0 Sepolia: `0xC68280a3F4cd791feDb8997C6690Bce95dFFfE7E`
-- V1 Sepolia: (see DEPLOYMENT-HISTORY.md after deploy)
-- V2 Sepolia: TBD
-- Production Mainnet: TBD
+- V1 Sepolia: see DEPLOYMENT-HISTORY.md
+- V2 Sepolia: see DEPLOYMENT-HISTORY.md
+- Production Mainnet: TBD (after PR #8)
